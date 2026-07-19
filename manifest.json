@@ -1,0 +1,21 @@
+{
+  "name": "Iceland Expedition 2026",
+  "short_name": "Iceland 2026",
+  "description": "Offline 16-Day Iceland Trip Portal & Journal",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
+  "icons": [
+    {
+      "src": "iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

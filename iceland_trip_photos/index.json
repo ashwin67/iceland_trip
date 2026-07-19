@@ -1,0 +1,332 @@
+[
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Keflav\u00edk International Airport (KEF)",
+    "file": "phase_1_arrival_and_geothermal_beginnings/01_keflavik_international_airport.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Cozy Campers HQ (K\u00f3pavogur)",
+    "file": "phase_1_arrival_and_geothermal_beginnings/02_cozy_campers_hq_kopavogur.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Mosskogar Camping or Grindav\u00edk",
+    "file": "phase_1_arrival_and_geothermal_beginnings/03_mosskogar_camping_or_grindavik.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "The Blue Lagoon",
+    "file": "phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Kr\u00f3nan or B\u00f3nus",
+    "file": "phase_1_arrival_and_geothermal_beginnings/05_kronan_or_bonus.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Thingvellir National Park",
+    "file": "phase_1_arrival_and_geothermal_beginnings/06_thingvellir_national_park.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Gj\u00e1in Valley",
+    "file": "phase_1_arrival_and_geothermal_beginnings/07_gjain_valley.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Strokkur Geyser",
+    "file": "phase_1_arrival_and_geothermal_beginnings/08_strokkur_geyser.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Gullfoss Falls",
+    "file": "phase_1_arrival_and_geothermal_beginnings/09_gullfoss_falls.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 1: Arrival & Geothermal Beginnings",
+    "name": "Skj\u00f3l Camping",
+    "file": "phase_1_arrival_and_geothermal_beginnings/10_skjol_camping.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 2: The Highlands & The South Coast Coastline",
+    "name": "Hella Campsite",
+    "file": "phase_2_the_highlands_and_the_south_coast/11_hella_campsite.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 2: The Highlands & The South Coast Coastline",
+    "name": "Landmannalaugar",
+    "file": "phase_2_the_highlands_and_the_south_coast/12_landmannalaugar.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 2: The Highlands & The South Coast Coastline",
+    "name": "Seljalandsfoss & Glj\u00fafrab\u00fai",
+    "file": "phase_2_the_highlands_and_the_south_coast/13_seljalandsfoss_and_gljufrabui.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 2: The Highlands & The South Coast Coastline",
+    "name": "Kvernufoss",
+    "file": "phase_2_the_highlands_and_the_south_coast/14_kvernufoss.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 2: The Highlands & The South Coast Coastline",
+    "name": "Sk\u00f3gafoss",
+    "file": "phase_2_the_highlands_and_the_south_coast/15_skogafoss.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 2: The Highlands & The South Coast Coastline",
+    "name": "Dyrh\u00f3laey Cliffs",
+    "file": "phase_2_the_highlands_and_the_south_coast/16_dyrholaey_cliffs.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 2: The Highlands & The South Coast Coastline",
+    "name": "Reynisfjara Beach",
+    "file": "phase_2_the_highlands_and_the_south_coast/17_reynisfjara_beach.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 2: The Highlands & The South Coast Coastline",
+    "name": "V\u00edk Campsite / The Soup Company",
+    "file": "phase_2_the_highlands_and_the_south_coast/18_vik_campsite_or_the_soup_company.png",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "Fja\u00f0r\u00e1rglj\u00fafur Canyon",
+    "file": "phase_3_canyons_and_glaciers/19_fjadrargljufur_canyon.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "Skaftafell National Park (Svartifoss)",
+    "file": "phase_3_canyons_and_glaciers/20_skaftafell_national_park_svartifoss.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "Skaftafell Campground",
+    "file": "phase_3_canyons_and_glaciers/21_skaftafell_campground.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "Glacier Adventure HQ",
+    "file": "phase_3_canyons_and_glaciers/22_glacier_adventure_hq.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "J\u00f6kuls\u00e1rl\u00f3n Glacier Lagoon",
+    "file": "phase_3_canyons_and_glaciers/23_jokulsarlon_glacier_lagoon.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "Diamond Beach",
+    "file": "phase_3_canyons_and_glaciers/24_diamond_beach.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "M\u00falaglj\u00fafur Canyon",
+    "file": "phase_3_canyons_and_glaciers/25_mulagljufur_canyon.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "Vestrahorn Mountain (Stokksnes)",
+    "file": "phase_3_canyons_and_glaciers/26_vestrahorn_mountain_stokksnes.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "Southern East Fjords Coastline",
+    "file": "phase_3_canyons_and_glaciers/27_southern_east_fjords_coastline.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 3: Canyons & Glaciers",
+    "name": "Dj\u00fapivogur Campsite",
+    "file": "phase_3_canyons_and_glaciers/28_djupivogur_campsite.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Hengifoss",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/29_hengifoss.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Egilssta\u00f0ir Town & Campsite",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/30_egilsstadir_town_and_campsite.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "V\u00f6k Baths",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/31_vok_baths.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Stu\u00f0lagil Canyon (East Side Approach)",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/32_studlagil_canyon.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Vogar Campsite",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/33_vogar_campsite.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Hverir",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/34_hverir.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Grj\u00f3tagj\u00e1 Cave",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/35_grjotagja_cave.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Dimmuborgir Lava Maze",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/36_dimmuborgir_lava_maze.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Earth Lagoon M\u00fdvatn",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/37_earth_lagoon_myvatn.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Daddi\u2019s Pizza",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/38_daddis_pizza.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "H\u00fasav\u00edk Harbor",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/39_husavik_harbor.webp",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "North Sailing",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/40_north_sailing.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Go\u00f0afoss Waterfall",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/41_godafoss_waterfall.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 4: East Fjords to the Volcanic North",
+    "name": "Camping Hamrar",
+    "file": "phase_4_east_fjords_to_the_volcanic_north/42_camping_hamrar.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 5: The Remote Westfjords Detour",
+    "name": "Route 61 (Dj\u00fapvegur)",
+    "file": "phase_5_the_remote_westfjords_detour/43_route_61_djupvegur.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 5: The Remote Westfjords Detour",
+    "name": "Roadside Seal Lookouts",
+    "file": "phase_5_the_remote_westfjords_detour/44_roadside_seal_lookouts.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 5: The Remote Westfjords Detour",
+    "name": "\u00cdsafj\u00f6r\u00f0ur Town & Campsite (Tungudalur)",
+    "file": "phase_5_the_remote_westfjords_detour/45_isafjordur_town_and_campsite.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 5: The Remote Westfjords Detour",
+    "name": "Dynjandi Waterfall",
+    "file": "phase_5_the_remote_westfjords_detour/46_dynjandi_waterfall.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 5: The Remote Westfjords Detour",
+    "name": "Fl\u00f3kalundur or T\u00e1lknafjordur Campsites",
+    "file": "phase_5_the_remote_westfjords_detour/47_flokalundur_or_talknafjordur_campsites.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 6: Capital Celebrations & Departure",
+    "name": "Deildartunguhver",
+    "file": "phase_6_capital_celebrations_and_departure/48_deildartunguhver.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 6: Capital Celebrations & Departure",
+    "name": "Mosskogar Camping",
+    "file": "phase_6_capital_celebrations_and_departure/49_mosskogar_camping.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 6: Capital Celebrations & Departure",
+    "name": "Hverager\u00f0i (Mega Zipline Svartaglj\u00fafur)",
+    "file": "phase_6_capital_celebrations_and_departure/50_hveragerdi_mega_zipline_svartagljufur.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 6: Capital Celebrations & Departure",
+    "name": "Downtown Reykjav\u00edk",
+    "file": "phase_6_capital_celebrations_and_departure/51_downtown_reykjavik.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 6: Capital Celebrations & Departure",
+    "name": "FlyOver Iceland",
+    "file": "phase_6_capital_celebrations_and_departure/52_flyover_iceland.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 6: Capital Celebrations & Departure",
+    "name": "Laugardalslaug Leisure Pool",
+    "file": "phase_6_capital_celebrations_and_departure/53_laugardalslaug_leisure_pool.png",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 6: Capital Celebrations & Departure",
+    "name": "Orkan / Ol\u00eds Station",
+    "file": "phase_6_capital_celebrations_and_departure/54_orkan_olis_station.jpg",
+    "status": "Success"
+  },
+  {
+    "phase": "Phase 6: Capital Celebrations & Departure",
+    "name": "Sandger\u00f0i Campsite",
+    "file": "phase_6_capital_celebrations_and_departure/55_sandgerdi_campsite.jpg",
+    "status": "Success"
+  }
+]

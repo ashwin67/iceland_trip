@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iceland Summer 2026 Expedition Portal | Master Plan & Logistics</title>
+  <meta name="description" content="Interactive 16-Day Iceland Ring Road, Highlands & Westfjords Expedition Plan & Logistics Hub for Cozy 3 M campervan travel.">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1120">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS for Map Mode -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky Application Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">🌋</div>
+        <div>
+          <div class="brand-title">ICELAND 2026</div>
+          <div class="brand-subtitle">Expedition Portal</div>
+        </div>
+      </a>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tabs">
+        <button class="tab-btn active" data-tab="itinerary">
+          <span>🗺️ Itinerary</span>
+        </button>
+        <button class="tab-btn" data-tab="map">
+          <span>📍 Map Mode</span>
+        </button>
+        <button class="tab-btn" data-tab="journal">
+          <span>📓 Trip Journal</span>
+        </button>
+        <button class="tab-btn" data-tab="logistics">
+          <span>🚐 Van & Logistics</span>
+        </button>
+        <button class="tab-btn" data-tab="packing">
+          <span>🎒 Packing Guide</span>
+        </button>
+        <button class="tab-btn" data-tab="calculators">
+          <span>🧮 Calculators</span>
+        </button>
+        <button class="tab-btn" data-tab="gallery">
+          <span>🖼️ Photo Gallery</span>
+        </button>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button class="btn-secondary" onclick="exportDataJSON()" title="Export JSON backup of your customized plan">
+          <span>📥 Export Plan</span>
+        </button>
+        <button class="btn-primary" onclick="addNewCustomDay()">
+          <span>➕ Add Day</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="app-container">
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge-row">
+          <span class="badge badge-ice">16 Days | July 24 - August 8, 2026</span>
+          <span class="badge badge-aurora">Cozy 3 M Manual Camper</span>
+          <span class="badge badge-amber">14 Camping Card Nights Covered (~€350 Saved)</span>
+        </div>
+
+        <h1 class="hero-title">Iceland Ring Road, Highlands & Westfjords Odyssey</h1>
+        <p class="hero-description">
+          An uncompromising 16-day expedition crafted for family exploration. Featuring the complete Ring Road loop, 4x4 Highland bus trip to Landmannalaugar rhyolite mountains, high-value hidden canyons, and the remote Westfjords.
+        </p>
+
+        <!-- Stats Overview Bar -->
+        <div class="trip-stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📅</div>
+            <div>
+              <div class="stat-val" id="stat-completed-days">0 / 16</div>
+              <div class="stat-lbl">Days Completed</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📍</div>
+            <div>
+              <div class="stat-val" id="stat-total-stops">55 Sights</div>
+              <div class="stat-lbl">Planned Highlights</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🚐</div>
+            <div>
+              <div class="stat-val">2,500 km</div>
+              <div class="stat-lbl">Estimated Loop Distance</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div>
+              <div class="stat-val">3 Persons</div>
+              <div class="stat-lbl">2 Adults, 1 Child (Age 11/12)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 1: MASTER ITINERARY -->
+    <main id="tab-panel-itinerary" class="tab-content-panel">
+      
+      <!-- Toolbar & Filters -->
+      <div class="toolbar-card">
+        <div class="filter-group">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; margin-right: 0.5rem;">Filter:</span>
+          <button class="filter-btn active" data-filter="all">All Days (16)</button>
+          <button class="filter-btn" data-filter="gems">🔥 New Gems (4)</button>
+          <button class="filter-btn" data-filter="highlands">🏔️ Highlands</button>
+          <button class="filter-btn" data-filter="westfjords">🌊 Westfjords</button>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" class="search-input" placeholder="Search waterfall, canyon, campsite, or day...">
+        </div>
+      </div>
+
+      <!-- Itinerary Grid -->
+      <div class="days-grid" id="itinerary-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </main>
+
+    <!-- TAB: MAP MODE -->
+    <section id="tab-panel-map" class="tab-content-panel hidden">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 1rem; gap: 1rem;">
+        <div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: #fff;">Interactive Expedition Map</h2>
+          <p class="text-muted">Full 16-day route and 55+ locations mapped with interactive popups and journal notes.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <button class="btn-primary" onclick="downloadKMLFile()">
+            <span>📥 Download KML Map File</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Leaflet Map Container -->
+      <div id="expedition-map" style="height: 700px; width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--glass-border); overflow: hidden; margin-bottom: 1.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5);"></div>
+
+      <!-- Android Mobile Connection Card -->
+      <div style="background: rgba(30, 41, 59, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
+        <h4 style="font-weight: 700; color: var(--aurora-400); font-size: 1rem; margin-bottom: 0.5rem;">📱 Access On Your Android Phone</h4>
+        <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5;">
+          1. Connect your Android phone to the same Wi-Fi / Hotspot as your laptop.<br>
+          2. Open Chrome or Firefox on your phone and type <strong>http://192.168.x.x:8080</strong> (or your laptop local IP).<br>
+          3. Tap <strong>"Add to Home Screen"</strong> in browser settings to install it as an offline Progressive Web App (PWA)!<br>
+          4. <strong>Offline GPS Maps</strong>: Click <em>"Download KML Map File"</em> above and open it in <strong>Google Maps</strong>, <strong>MAPS.ME</strong>, or <strong>Organic Maps</strong> on Android.
+        </p>
+      </div>
+    </section>
+
+    <!-- TAB: TRIP JOURNAL -->
+    <section id="tab-panel-journal" class="tab-content-panel hidden">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">📓 Expedition Location Journal</h2>
+        <p class="text-muted">View all your saved location notes, memories, and travel logs.</p>
+      </div>
+
+      <div id="journal-entries-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- TAB 2: VAN & LOGISTICS -->
+    <section id="tab-panel-logistics" class="tab-content-panel hidden">
+      <div class="section-grid">
+        
+        <!-- Cozy 3 M Vehicle Specs -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">🚐</div>
+            <div>
+              <div class="info-card-title">Cozy 3 M Fleet Parameters</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">2WD Manual Campervan</div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span class="text-muted">Chassis Dimensions</span>
+              <span style="font-weight: 600;">5.4m Length / 1.4m Interior Height</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span class="text-muted">Bed Platform Size</span>
+              <span style="font-weight: 600;">160cm x 193cm (Convertible Sofa Bed)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span class="text-muted">Heating Utility</span>
+              <span style="font-weight: 600; color: #fcd34d;">Webasto Diesel (Connected to 80L Tank)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span class="text-muted">Electrical Supply</span>
+              <span style="font-weight: 600; color: #a7f3d0;">115W Solar + Engine Alternator</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span class="text-muted">Kitchen Essentials</span>
+              <span style="font-weight: 600;">21L Fridge, Gas Stove, Sink & 20L Water</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrival & Keybox Protocol -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">✈️</div>
+            <div>
+              <div class="info-card-title">Day 1 KEF Arrival Timeline</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Flight FI507 Arrival & Keybox Drop</div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+            <div style="background: rgba(30, 41, 59, 0.5); padding: 0.75rem; border-radius: var(--radius-md);">
+              <div style="font-weight: 700; color: var(--ice-400);">18:20 Landing at KEF</div>
+              <div style="color: var(--text-muted);">Clear border control & collect 3 hard cases + 3 carry-ons. Put on windproof shell immediately.</div>
+            </div>
+            <div style="background: rgba(30, 41, 59, 0.5); padding: 0.75rem; border-radius: var(--radius-md);">
+              <div style="font-weight: 700; color: var(--ice-400);">19:45 - 20:30 Flybus to Kópavogur</div>
+              <div style="color: var(--text-muted);">Board Flybus outside terminal to Hamraborg stop (Kópavogur Library).</div>
+            </div>
+            <div style="background: rgba(30, 41, 59, 0.5); padding: 0.75rem; border-radius: var(--radius-md);">
+              <div style="font-weight: 700; color: var(--ice-400);">20:30 Taxi to Cozy HQ & Keybox Pickup</div>
+              <div style="color: var(--text-muted);">Short 3.5km Hreyfill taxi ride to Kársnesbraut 106. Keybox code self-service pickup.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Camping Card 2026 Guide -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">⛺</div>
+            <div>
+              <div class="info-card-title">Camping Card 2026 Coverage</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">14 Nights Included in Pass</div>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            The Icelandic Camping Card covers overnight stay fees for 2 adults and up to 4 children at designated partner campsites across Iceland.
+          </p>
+          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.825rem; color: #a7f3d0;">
+            <strong>Covered Sites On Route:</strong> Sandgerði, Gaddstaðaflatir Hella, Kleifarmörk, Skaftafell, Djúpivogur, Egilsstaðir, Möðrudalur, Húsavík, Skagaströnd, Tungudalur (Ísafjörður), Tálknafjörður, Tjaldsvæði að Hlöðum.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 3: PACKING GUIDE -->
+    <section id="tab-panel-packing" class="tab-content-panel hidden">
+      <div class="section-grid">
+        
+        <!-- Amsterdam Section -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">🇳🇱</div>
+            <div>
+              <div class="info-card-title">Bring From Amsterdam</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Gear & Personal Clothing</div>
+            </div>
+          </div>
+          <div id="pack-ams-list" class="checklist-container"></div>
+          <button class="btn-secondary" style="margin-top: 0.5rem; font-size: 0.8rem;" onclick="addPackingItem('ams')">➕ Add Item</button>
+        </div>
+
+        <!-- Day 1 Groceries -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">🛒</div>
+            <div>
+              <div class="info-card-title">Buy Day 1 (Kópavogur)</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Krónan / Bónus Grocery Haul</div>
+            </div>
+          </div>
+          <div id="pack-d1-list" class="checklist-container"></div>
+          <button class="btn-secondary" style="margin-top: 0.5rem; font-size: 0.8rem;" onclick="addPackingItem('d1')">➕ Add Item</button>
+        </div>
+
+        <!-- Road Trip Supplies -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">🛣️</div>
+            <div>
+              <div class="info-card-title">Buy Along The Way</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Gas, Bakery & Maintenance</div>
+            </div>
+          </div>
+          <div id="pack-rd-list" class="checklist-container"></div>
+          <button class="btn-secondary" style="margin-top: 0.5rem; font-size: 0.8rem;" onclick="addPackingItem('rd')">➕ Add Item</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 4: CALCULATORS & BUDGET -->
+    <section id="tab-panel-calculators" class="tab-content-panel hidden">
+      <div class="section-grid">
+        
+        <!-- Luggage Tetris Calculator -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">🧳</div>
+            <div>
+              <div class="info-card-title">Van Luggage Space Advisor</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Cozy 3 M Storage Tetris</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Checked Hard Suitcases (20kg Limit)</label>
+            <input type="number" id="calc-hard" class="form-input" value="3" min="0" max="6" onchange="calculateLuggageTetris()">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Cabin Carry-On / Soft Bags (10kg Limit)</label>
+            <input type="number" id="calc-soft" class="form-input" value="3" min="0" max="6" onchange="calculateLuggageTetris()">
+          </div>
+
+          <div id="tetris-result"></div>
+        </div>
+
+        <!-- Ferry Baldur Cost Estimator -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">⛵</div>
+            <div>
+              <div class="info-card-title">Ferry Baldur Cost Estimator</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Breiðafjörður Fjord Crossing (Aug 5)</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Vehicle Length (Meters)</label>
+            <select id="ferry-len" class="form-select" onchange="calculateFerryFare()">
+              <option value="5.4" selected>Cozy 3 M (5.4m total chassis)</option>
+              <option value="4.9">Compact Van (Under 5.0m)</option>
+              <option value="6.5">Large Motorhome (Over 6.0m)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Adult Passengers</label>
+            <input type="number" id="ferry-adults" class="form-input" value="2" min="1" max="5" onchange="calculateFerryFare()">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Child Passenger Age</label>
+            <input type="number" id="ferry-child-age" class="form-input" value="11" min="1" max="17" onchange="calculateFerryFare()">
+          </div>
+
+          <div style="background: rgba(30, 41, 59, 0.6); padding: 1rem; border-radius: var(--radius-md); font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+            <div style="display: flex; justify-content: space-between;">
+              <span class="text-muted">Vehicle Base Fare:</span>
+              <span id="ferry-veh-fare" style="font-weight: 600;">13,800 ISK</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span class="text-muted">Adult Tickets:</span>
+              <span id="ferry-adult-fare" style="font-weight: 600;">15,400 ISK</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span class="text-muted">Child Ticket (Age 11):</span>
+              <span id="ferry-child-fare" style="font-weight: 600; color: #a7f3d0;">0 ISK (Free)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-weight: 700; color: var(--ice-400);">
+              <span>Total Estimated Fare:</span>
+              <span id="ferry-total-fare">29,200 ISK (~€195)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 5: PHOTO GALLERY -->
+    <section id="tab-panel-gallery" class="tab-content-panel hidden">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Expedition Photo Asset Explorer</h2>
+        <p class="text-muted">Click any photo to view full-resolution lightbox view.</p>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+  </div>
+
+  <!-- READ-ONLY DAY VIEW MODAL -->
+  <div class="modal-overlay" id="day-view-modal">
+    <div class="modal-card" style="max-width: 760px; background: rgba(15, 23, 42, 0.98);">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: var(--ice-400); font-weight: 700; text-transform: uppercase;" id="view-modal-day-num">DAY 1</span>
+          <h2 class="modal-title" style="margin-top: 0.2rem;" id="view-modal-title">Day Title</h2>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;" id="view-modal-date">July 24, 2026</div>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button class="btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 0.8rem;" onclick="switchToEditFromView()">✏️ Edit Plan</button>
+          <button class="modal-close-btn" onclick="closeModal('day-view-modal')">✕</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div style="background: rgba(30, 41, 59, 0.5); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border); margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; font-size: 0.85rem;">
+          <div>
+            <span class="text-muted">Driving Route:</span>
+            <div style="font-weight: 600; color: #fff;" id="view-modal-route">Route...</div>
+          </div>
+          <div>
+            <span class="text-muted">Driving Time & Distance:</span>
+            <div style="font-weight: 600; color: var(--ice-400);" id="view-modal-driving">~2 hours</div>
+          </div>
+          <div>
+            <span class="text-muted">Overnight Camp:</span>
+            <div style="font-weight: 600; color: #fcd34d;" id="view-modal-campsite">Campsite</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <div class="form-label" style="margin-bottom: 0.25rem;">Phase & Category</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);" id="view-modal-phase">Phase 1</div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <div class="form-label" style="margin-bottom: 0.25rem;">Day Overview</div>
+          <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.6;" id="view-modal-summary">Summary text...</p>
+        </div>
+
+        <div id="view-modal-notes-box" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.85rem; color: #fde68a; margin-bottom: 1.25rem; display: none;">
+          <strong>⚠️ Warnings / Notes:</strong>
+          <div id="view-modal-notes" style="margin-top: 0.25rem;"></div>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Sights & Location Journal</h3>
+          <div id="view-modal-stops-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT DAY & DETAILS MODAL -->
+  <div class="modal-overlay" id="day-editor-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: var(--ice-400); font-weight: 700; text-transform: uppercase;" id="modal-day-num">DAY 1</span>
+          <h2 class="modal-title" style="margin-top: 0.2rem;">Edit Day Plan Details</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeDayModal()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label">Day Title</label>
+            <input type="text" id="edit-day-title" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Date</label>
+            <input type="text" id="edit-day-date" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Category Filter</label>
+            <select id="edit-day-category" class="form-select">
+              <option value="standard">Standard Route</option>
+              <option value="gems">🔥 New Gem</option>
+              <option value="highlands">🏔️ Highlands</option>
+              <option value="westfjords">🌊 Westfjords</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Driving Time & Distance</label>
+            <input type="text" id="edit-day-driving" class="form-input">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phase Name</label>
+          <input type="text" id="edit-day-phase" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Driving Route Path</label>
+          <input type="text" id="edit-day-route" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Overnight Campsite</label>
+          <input type="text" id="edit-day-campsite" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Day Overview & Summary</label>
+          <textarea id="edit-day-summary" class="form-textarea"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Special Warnings / Important Notes</label>
+          <textarea id="edit-day-notes" class="form-textarea" placeholder="e.g., Sneaker waves at Reynisfjara..."></textarea>
+        </div>
+
+        <!-- Stops Editor Section -->
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+            <div class="form-label">Sights & Stops List</div>
+            <button class="btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.75rem;" onclick="addStopToEditingDay()">➕ Add Stop</button>
+          </div>
+          <div id="modal-stops-container"></div>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 1rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <button class="btn-secondary" onclick="closeDayModal()">Cancel</button>
+          <button class="btn-primary" onclick="saveDayModalChanges()">💾 Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO LIGHTBOX MODAL -->
+  <div class="modal-overlay" id="photo-lightbox-modal">
+    <div class="modal-card" style="max-width: 800px; background: rgba(9, 13, 22, 0.98);">
+      <div class="modal-header">
+        <h3 id="lightbox-title" class="modal-title">Photo View</h3>
+        <button class="modal-close-btn" onclick="closeModal('photo-lightbox-modal')">✕</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <img id="lightbox-img" src="" alt="" style="max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS & KML Data -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="kml_data.js"></script>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

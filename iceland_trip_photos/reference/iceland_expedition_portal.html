@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iceland Summer 2026 Expedition Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        ice: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        basalt: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.05);
+            border-radius: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: rgba(14, 165, 233, 0.3);
+            border-radius: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: rgba(14, 165, 233, 0.6);
+        }
+        .tab-btn.active {
+            border-bottom-color: #0284c7;
+            color: #0284c7;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-ice-200">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🌋</span>
+                    <div>
+                        <h1 class="text-md font-bold text-slate-900 leading-tight">ICELAND EXPEDITION</h1>
+                        <p class="text-[10px] text-sky-600 tracking-wider font-semibold uppercase">Summer 2026 Portal</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full">
+                    <span class="inline-block w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
+                    <span>Ready for Offline Use</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-slate-950 text-white overflow-hidden py-16 sm:py-24">
+        <div class="absolute inset-0 opacity-40 mix-blend-overlay">
+            <img src="https://images.unsplash.com/photo-1504829857797-ddff28127792?auto=format&fit=crop&q=80&w=1200" alt="Icelandic scenery" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="inline-block bg-ice-600/30 text-sky-300 border border-sky-400/30 text-xs px-3 py-1 rounded-full mb-4 font-semibold uppercase tracking-wider">
+                15 Days | July 24 - August 8, 2026
+            </div>
+            <h2 class="text-4xl sm:text-6xl font-extrabold font-serif tracking-tight mb-4">
+                The Ultimate Loop &amp; <br class="hidden sm:inline"><span class="text-sky-400">Highland Odyssey</span>
+            </h2>
+            <p class="text-lg text-slate-300 max-w-2xl mb-8">
+                Uncompromising exploration of Iceland's Ring Road, Westfjords, and volcanic Highlands optimized for a Cozy 3 M camper and the Icelandic Camping Card.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
+                <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 text-center sm:text-left">
+                    <p class="text-[11px] text-sky-300 uppercase tracking-wider font-semibold">Active Vehicle</p>
+                    <p class="text-base font-bold mt-1">Cozy 3 M Manual</p>
+                    <p class="text-[10px] text-slate-400">2WD, solar roof, diesel heater</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 text-center sm:text-left">
+                    <p class="text-[11px] text-sky-300 uppercase tracking-wider font-semibold">Travelers</p>
+                    <p class="text-base font-bold mt-1">3 Persons</p>
+                    <p class="text-[10px] text-slate-400">2 Adults, 1 Child (Age 11/12)</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 text-center sm:text-left">
+                    <p class="text-[11px] text-sky-300 uppercase tracking-wider font-semibold">Camp Card Nights</p>
+                    <p class="text-base font-bold mt-1">14 Nights Saved</p>
+                    <p class="text-[10px] text-emerald-400">Estimated Saving: ~€350</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 text-center sm:text-left">
+                    <p class="text-[11px] text-sky-300 uppercase tracking-wider font-semibold">Highland Route</p>
+                    <p class="text-base font-bold mt-1">4x4 Mountain Bus</p>
+                    <p class="text-[10px] text-slate-400">Safety compliance for 2WD</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="border-b border-slate-200 mb-8 overflow-x-auto custom-scroll">
+            <nav class="flex space-x-8 min-w-[600px]" aria-label="Tabs">
+                <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn active border-b-2 border-transparent py-4 px-1 text-sm font-medium whitespace-nowrap transition-all duration-200">
+                    🗺️ Interactive Itinerary
+                </button>
+                <button onclick="switchTab('logistics')" id="tab-logistics" class="tab-btn border-b-2 border-transparent py-4 px-1 text-sm font-medium whitespace-nowrap transition-all duration-200">
+                    ⏱️ Hour-by-Hour Arrival &amp; Limits
+                </button>
+                <button onclick="switchTab('packing')" id="tab-packing" class="tab-btn border-b-2 border-transparent py-4 px-1 text-sm font-medium whitespace-nowrap transition-all duration-200">
+                    🎒 Persistent Packing Guide
+                </button>
+                <button onclick="switchTab('calc')" id="tab-calc" class="tab-btn border-b-2 border-transparent py-4 px-1 text-sm font-medium whitespace-nowrap transition-all duration-200">
+                    🧮 Ferry &amp; Space Calculators
+                </button>
+            </nav>
+        </div>
+
+        <!-- ==================== TAB: ITINERARY ==================== -->
+        <section id="content-itinerary" class="space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">Your Master Route Timeline</h3>
+                    <p class="text-sm text-slate-500 mt-1">Optimized Loop containing all 3 newly added high-value gems &amp; Landmannalaugar.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterDays('all')" class="day-filter-btn px-4 py-2 bg-slate-900 text-white rounded-lg text-xs font-semibold transition-all shadow-sm">All Days</button>
+                    <button onclick="filterDays('gems')" class="day-filter-btn px-4 py-2 bg-white text-slate-600 border border-slate-200 rounded-lg text-xs font-semibold hover:bg-slate-50 transition-all">🔥 New Gems Only</button>
+                    <button onclick="filterDays('highlands')" class="day-filter-btn px-4 py-2 bg-white text-slate-600 border border-slate-200 rounded-lg text-xs font-semibold hover:bg-slate-50 transition-all">🏔️ Highlands Only</button>
+                </div>
+            </div>
+
+            <div class="space-y-6" id="timeline-container">
+                <!-- Day 1 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="arrival">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 1</span>
+                            <span class="text-slate-400 font-semibold text-sm">July 24, 2026</span>
+                            <h4 class="text-base font-bold">Arrival &amp; Late-Night Launch</h4>
+                        </div>
+                        <span class="text-xs bg-sky-500/20 text-sky-300 border border-sky-400/30 px-3 py-1 rounded-full font-medium">Arrival Phase</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Land in Keflavík at 18:20 on flight FI507. Collect three hard-sided cases and three carry-ons, change into your thermal shell immediately to combat the cold coastal wind, and take the Flybus and taxi to Cozy Campers HQ.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-sky-600 text-base">✈️</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">KEF Landing</p>
+                                        <p class="text-slate-500">18:20 Flight Arrival</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-sky-600 text-base">🔑</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Keybox Collection</p>
+                                        <p class="text-slate-500">After-hours pickup Cozy HQ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Keflavík Airport ➔ Kópavogur ➔ Sandgerði</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~35 min</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Sandgerði Campsite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="gems">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 2</span>
+                            <span class="text-slate-400 font-semibold text-sm">July 25, 2026</span>
+                            <h4 class="text-base font-bold">Volcanic Soaks &amp; The Golden Circle Sprint</h4>
+                        </div>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 px-3 py-1 rounded-full font-medium">🔥 Includes New Gem</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Soak at the Blue Lagoon at 09:00, stock up on vegan items at Krónan/Bónus in Kópavogur, and explore the iconic Golden Circle. Take a late-afternoon detour into the fairytale valley of <strong>Gjáin</strong> before heading to Hella.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">09:00 Blue Lagoon</p>
+                                    <p class="text-slate-500">Unwind in mineral rich waters</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">🛍️ Krónan Grocery</p>
+                                    <p class="text-slate-500">Stock up on Oumph! &amp; Alpro</p>
+                                </div>
+                                <div class="bg-amber-50 p-3 rounded-xl border border-amber-200">
+                                    <p class="font-bold text-amber-900">🔥 Gem: Gjáin Valley</p>
+                                    <p class="text-amber-700">Park at Stöng ruins to avoid ruts</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Sandgerði ➔ Golden Circle ➔ Gjáin ➔ Hella</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~2.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Gaddstaðaflatir Hella</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="highlands">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 3</span>
+                            <span class="text-slate-400 font-semibold text-sm">July 26, 2026</span>
+                            <h4 class="text-base font-bold">Landmannalaugar Highland Odyssey</h4>
+                        </div>
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 rounded-full font-medium">🏔️ Highlands Tour</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Park your 2WD camper securely at Hella. Board the rugged 4x4 Highland Bus at 08:45 AM. Journey into Landmannalaugar to witness multi-colored rhyolite mountains, hike the volcanic trails, and take a magical dip in natural warm rivers. Return by 18:00.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100 flex items-start space-x-2">
+                                    <span class="text-indigo-600 text-base">🚌</span>
+                                    <div>
+                                        <p class="font-bold text-indigo-950">08:45 Highland Bus</p>
+                                        <p class="text-indigo-700">Departs Hella Olís station</p>
+                                    </div>
+                                </div>
+                                <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-100 flex items-start space-x-2">
+                                    <span class="text-emerald-600 text-base">🛀</span>
+                                    <div>
+                                        <p class="font-bold text-emerald-950">Natural River Soak</p>
+                                        <p class="text-emerald-700">Bring swimwear and towels</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Hella ➔ Landmannalaugar (Bus) ➔ Hella</p>
+                                <p class="text-xs text-slate-500">🚗 Total Camper Driving: 0 min</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Gaddstaðaflatir Hella (Night 2)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="gems">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 4</span>
+                            <span class="text-slate-400 font-semibold text-sm">July 27, 2026</span>
+                            <h4 class="text-base font-bold">Thundering Waterfalls &amp; Secret Cliffs</h4>
+                        </div>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 px-3 py-1 rounded-full font-medium">🔥 Includes New Gem</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Drive to Seljalandsfoss (walk behind the curtain) and Gljúfrabúi. Next, check out the hidden walk-behind waterfall <strong>Kvernufoss</strong> before visiting Skógafoss. End the day at Dyrhólaey cliffs and Reynisfjara beach.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">💦 Walk Behind Falls</p>
+                                    <p class="text-slate-500">Seljalandsfoss &amp; Gljúfrabúi</p>
+                                </div>
+                                <div class="bg-amber-50 p-3 rounded-xl border border-amber-200">
+                                    <p class="font-bold text-amber-950">🔥 Gem: Kvernufoss</p>
+                                    <p class="text-amber-700">Park at Skógar Museum; 20-min flat hike</p>
+                                </div>
+                                <div class="bg-rose-50 p-3 rounded-xl border border-rose-100">
+                                    <p class="font-bold text-rose-950">⚠️ Safety Warning</p>
+                                    <p class="text-rose-700">Reynisfjara sneaker waves present</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Hella ➔ waterfalls ➔ Vík ➔ Kleifarmörk</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~2 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Kleifarmörk Campsite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="loop">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 5</span>
+                            <span class="text-slate-400 font-semibold text-sm">July 28, 2026</span>
+                            <h4 class="text-base font-bold">Deep Canyons &amp; Basalt Columns</h4>
+                        </div>
+                        <span class="text-xs bg-slate-500/20 text-slate-300 border border-slate-400/30 px-3 py-1 rounded-full font-medium">Standard Route</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Explore the massive, deep green rim pathways of Fjaðrárgljúfur Canyon in the morning. Head east across the sandur plains to Skaftafell to take the short hike to Svartifoss waterfall, framed by hanging basalt columns.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🦎</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Fjaðrárgljúfur Canyon</p>
+                                        <p class="text-slate-500">Walk carefully on marked paths</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🏛️</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Svartifoss Columns</p>
+                                        <p class="text-slate-500">Short basalt canyon trail</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Kleifarmörk ➔ Fjaðrárgljúfur ➔ Skaftafell</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~1 hour</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-rose-100 text-rose-800">💵 Paid Night: Skaftafell Campground</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 6 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="gems">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 6</span>
+                            <span class="text-slate-400 font-semibold text-sm">July 29, 2026</span>
+                            <h4 class="text-base font-bold">Glacier Hiking &amp; Hidden Highland Canyons</h4>
+                        </div>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-400/30 px-3 py-1 rounded-full font-medium">🔥 Includes New Gem</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Embark on your pre-booked glacier hike at Falljökull with Glacier Adventure. Visit Jökulsárlón Lagoon and Diamond Beach, then head west to hike the spectacular, raw <strong>Múlagljúfur Canyon</strong> viewpoint before camping.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">🧊 Glacier Ice Hike</p>
+                                    <p class="text-slate-500">09:00 - 12:30 Glacier Tour</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">💎 Diamond Beach</p>
+                                    <p class="text-slate-500">Icebergs on black basalt sand</p>
+                                </div>
+                                <div class="bg-amber-50 p-3 rounded-xl border border-amber-200">
+                                    <p class="font-bold text-amber-950">🔥 Gem: Múlagljúfur</p>
+                                    <p class="text-amber-700">3.8 km hike to dramatic canyon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Skaftafell ➔ Jökulsárlón ➔ Bragðavellir</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~2 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Tjaldsvæðið Bragðavöllum</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 7 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="loop">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 7</span>
+                            <span class="text-slate-400 font-semibold text-sm">July 30, 2026</span>
+                            <h4 class="text-base font-bold">Fjord Highways &amp; Floating Geo Baths</h4>
+                        </div>
+                        <span class="text-xs bg-slate-500/20 text-slate-300 border border-slate-400/30 px-3 py-1 rounded-full font-medium">Standard Route</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Drive past dramatic coastal East Fjords. Hike to the red clay-striped Hengifoss waterfall in the afternoon. Drive into Egilsstaðir and reward your legs by soaking in the floating geothermal pools at Vök Baths.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🔴</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Hengifoss Waterfall</p>
+                                        <p class="text-slate-500">Uphill red-clay layers trail</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">♨️</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Vök Baths</p>
+                                        <p class="text-slate-500">Floating lake hot springs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Bragðavellir ➔ Hengifoss ➔ Seyðisfjörður</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~3.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Seyðisfjörður Campsite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 8 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="loop">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 8</span>
+                            <span class="text-slate-400 font-semibold text-sm">July 31, 2026</span>
+                            <h4 class="text-base font-bold">Stuðlagil Basalt Floor &amp; Highland Farm</h4>
+                        </div>
+                        <span class="text-xs bg-slate-500/20 text-slate-300 border border-slate-400/30 px-3 py-1 rounded-full font-medium">Standard Route</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Walk into the floor of the basalt column marvel, Stuðlagil Canyon. Make sure to drive up the East Side via Road 923. Detour past skipped Dettifoss straight into Möðrudalur, the highest historic turf-house farm campsite in Iceland.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-amber-600 text-base">⚠️</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Stuðlagil Parking Rules</p>
+                                        <p class="text-slate-500">Park at first lot before bridge to protect 2WD</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🚫</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Skipped Sights</p>
+                                        <p class="text-slate-500">Dettifoss dropped for optimized speed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Seyðisfjörður ➔ Road 923 ➔ Möðrudalur</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~2.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Möðrudalur - Fjalladýrð</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 9 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="loop">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 9</span>
+                            <span class="text-slate-400 font-semibold text-sm">August 1, 2026</span>
+                            <h4 class="text-base font-bold">Mývatn Volcanics &amp; Northern Soaks</h4>
+                        </div>
+                        <span class="text-xs bg-slate-500/20 text-slate-300 border border-slate-400/30 px-3 py-1 rounded-full font-medium">Standard Route</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Spend the day exploring sulfuric hot pots at Hverir, walk into Grjótagjá volcanic thermal cave, and navigate the Dimmuborgir lava ruins. Settle down at Mývatn Earth Lagoon for a long soak before camping in whale-town Húsavík.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">💨 Hverir Sulfur Pots</p>
+                                    <p class="text-slate-500">Smelly, steaming fuming vents</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">🦇 Dimmuborgir</p>
+                                    <p class="text-slate-500">Massive hollow volcanic ruins</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">💧 Earth Lagoon</p>
+                                    <p class="text-slate-500">Thermal mineral silica bath</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Möðrudalur ➔ Lake Mývatn ➔ Húsavík</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~1.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Húsavík Campsite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 10 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="loop">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 10</span>
+                            <span class="text-slate-400 font-semibold text-sm">August 2, 2026</span>
+                            <h4 class="text-base font-bold">Electric Whale Watching &amp; Forest Base</h4>
+                        </div>
+                        <span class="text-xs bg-slate-500/20 text-slate-300 border border-slate-400/30 px-3 py-1 rounded-full font-medium">Standard Route</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Board your silent, carbon-neutral electric boat with North Sailing in Húsavík at 09:00 to observe humpback whales. Drive west to see Goðafoss, skip the long Hvítserkur detour, and drive past Akureyri to camp near the sea.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🐋</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">09:00 Electric Boat</p>
+                                        <p class="text-slate-500">Silent humpback whale watching</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🚫</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Skipped Sights</p>
+                                        <p class="text-slate-500">Hvítserkur stack removed to save time</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Húsavík ➔ Goðafoss ➔ Skagaströnd</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~3.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Skagaströnd Campsite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 11 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="westfjords">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 11</span>
+                            <span class="text-slate-400 font-semibold text-sm">August 3, 2026</span>
+                            <h4 class="text-base font-bold">The Fjords Highway to Ísafjörður</h4>
+                        </div>
+                        <span class="text-xs bg-sky-500/20 text-sky-300 border border-sky-400/30 px-3 py-1 rounded-full font-medium">Westfjords Phase</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Depart the Ring Road for the spectacular Westfjords loop. Drive along paved Route 61 (Djúpvegur), winding around beautiful fjords. Stop at seaside turn-offs to watch wild colonies of harbor seals resting on rocks.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🚗</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Route 61 (Djúpvegur)</p>
+                                        <p class="text-slate-500">100% paved, highly safe coastal drive</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🦭</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Wild Seal Lookout</p>
+                                        <p class="text-slate-500">Rocky pull-offs near Hvítanes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Skagaströnd ➔ Route 61 ➔ Ísafjörður</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~4.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Tungudalur (Ísafjörður)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 12 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="westfjords">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 12</span>
+                            <span class="text-slate-400 font-semibold text-sm">August 4, 2026</span>
+                            <h4 class="text-base font-bold">The Bridal Veil of the Westfjords</h4>
+                        </div>
+                        <span class="text-xs bg-sky-500/20 text-sky-300 border border-sky-400/30 px-3 py-1 rounded-full font-medium">Westfjords Phase</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Buy fresh sourdough bread and pastries in Ísafjörður. Drive carefully over the unpaved mountain pass of Dynjandisheiði. Spend the afternoon marveling at Dynjandi, a massive 100-meter-tall bridal veil waterfall.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="bg-rose-50 p-3 rounded-xl border border-rose-200">
+                                    <p class="font-bold text-rose-950">⚠️ Active Construction</p>
+                                    <p class="text-rose-700">Route 60 Dynjandisheiði Pass</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">💫 Dynjandi Falls</p>
+                                    <p class="text-slate-500">100m towering jewel of Westfjords</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">🛒 Nettó Ísafjörður</p>
+                                    <p class="text-slate-500">Restock fresh local vegetables</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Ísafjörður ➔ Dynjandi ➔ Tálknafjörður</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~2.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Tálknafjörður Campsite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 13 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="westfjords">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 13</span>
+                            <span class="text-slate-400 font-semibold text-sm">August 5, 2026</span>
+                            <h4 class="text-base font-bold">Ferry Baldur Crossing to Fjord Base</h4>
+                        </div>
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 rounded-full font-medium">⛵ Ferry Transit</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Board Ferry Baldur at 12:00 from Brjánslækur to Stykkishólmur. Relax on the 2.5-hour bay crossing. Drive inland past skipped Snæfellsnes directly to Hvalfjörður fjord base to stay at a quiet greenhouse site.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🛳️</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Ferry Baldur (12:00)</p>
+                                        <p class="text-slate-500">2.5-hour relaxing cruise link</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🚫</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Skipped Sights</p>
+                                        <p class="text-slate-500">Snæfellsnes Loop dropped to save driving</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Tálknafjörður ➔ Brjánslækur ➔ Hvalfjörður</p>
+                                <p class="text-xs text-slate-500">🚗 Total Camper Driving: ~2.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Tjaldsvæði að Hlöðum</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 14 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="loop">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 14</span>
+                            <span class="text-slate-400 font-semibold text-sm">August 6, 2026</span>
+                            <h4 class="text-base font-bold">The Silver Circle &amp; Lava Falls</h4>
+                        </div>
+                        <span class="text-xs bg-slate-500/20 text-slate-300 border border-slate-400/30 px-3 py-1 rounded-full font-medium">Standard Route</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Unwind with a scenic loop of the Silver Circle. See the stunning Hraunfossar (lava springs) and Barnafoss. Visit Deildartunguhver, Europe's most powerful boiling hot spring. Return to your quiet campsite in Hvalfjörður without re-packing.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🌋</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Hraunfossar Falls</p>
+                                        <p class="text-slate-500">Springs flowing out of lava edges</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🔥</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Deildartunguhver</p>
+                                        <p class="text-slate-500">Vaporous boiling hot springs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Hvalfjörður ➔ Silver Circle ➔ Hvalfjörður</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~2 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Tjaldsvæði að Hlöðum (Night 2)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 15 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="arrival">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 15</span>
+                            <span class="text-slate-400 font-semibold text-sm">August 7, 2026</span>
+                            <h4 class="text-base font-bold">The Great Birthday Celebration in the Capital</h4>
+                        </div>
+                        <span class="text-xs bg-sky-500/20 text-sky-300 border border-sky-400/30 px-3 py-1 rounded-full font-medium">Celebration Phase</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Fly the Mega Zipline at Hveragerði at 09:30. Spend the afternoon in downtown Reykjavík: eat Vegan Pylsa, ride FlyOver Iceland simulation, and play at Laugardalslaug public pool. Prep and clean the van tonight.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">🦅 Mega Zipline</p>
+                                    <p class="text-slate-500">Fly over Svartagljúfur canyon</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">🌭 Vegan Pylsa</p>
+                                    <p class="text-slate-500">Gourmet hot dogs downtown</p>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <p class="font-bold text-slate-900">🏊 Laugardalslaug</p>
+                                    <p class="text-slate-500">Giant waterslides &amp; hot tubs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Hvalfjörður ➔ Reykjavík ➔ Sandgerði</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~1.5 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800">⛺ Card: Sandgerði Campsite (Night 2)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 16 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-md" data-category="arrival">
+                    <div class="bg-slate-900 text-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-sky-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">DAY 16</span>
+                            <span class="text-slate-400 font-semibold text-sm">August 8, 2026</span>
+                            <h4 class="text-base font-bold">Dawn Drop-Off &amp; Farewell</h4>
+                        </div>
+                        <span class="text-xs bg-sky-500/20 text-sky-300 border border-sky-400/30 px-3 py-1 rounded-full font-medium">Departure Phase</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+                        <div class="md:col-span-8 space-y-4">
+                            <p class="text-slate-600 text-sm">
+                                Drive to Cozy Campers HQ in Kópavogur at 04:30. Lock keys inside the after-hours keybox at 05:00. Take a pre-booked local taxi directly to KEF airport to catch your 07:40 flight back to Amsterdam.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🔑</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">05:00 Drop keys</p>
+                                        <p class="text-slate-500">Cozy Campers keybox drop</p>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-start space-x-2">
+                                    <span class="text-slate-600 text-base">🚖</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Pre-booked Taxi</p>
+                                        <p class="text-slate-500">Hreyfill Taxi to KEF Airport</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Route &amp; Overnight</p>
+                                <p class="text-sm font-bold text-slate-900">Sandgerði ➔ Kópavogur ➔ KEF Airport</p>
+                                <p class="text-xs text-slate-500">🚗 Total Driving: ~1.2 hours</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <span class="inline-block text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-200 text-slate-700">🛫 Return Flight: FI1500 (07:40)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== TAB: LOGISTICS ==================== -->
+        <section id="content-logistics" class="space-y-8 hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left Side: Hour-by-Hour Landing Protocol -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center space-x-2">
+                            <span>⏱️</span> <span>Day 1 Landing Timeline (July 24)</span>
+                        </h3>
+                        <div class="relative border-l border-sky-200 ml-4 space-y-6">
+                            <div class="relative pl-6">
+                                <span class="absolute left-[-6px] top-1.5 w-3.5 h-3.5 rounded-full bg-sky-500 border-2 border-white"></span>
+                                <p class="text-xs font-semibold text-sky-600">18:20</p>
+                                <h4 class="font-bold text-slate-900 text-sm mt-0.5">Flight Landing (FI507)</h4>
+                                <p class="text-slate-500 text-xs mt-1">Land at KEF. Clear border controls, head straight to baggage claim.</p>
+                            </div>
+                            <div class="relative pl-6">
+                                <span class="absolute left-[-6px] top-1.5 w-3.5 h-3.5 rounded-full bg-sky-500 border-2 border-white"></span>
+                                <p class="text-xs font-semibold text-sky-600">19:00 - 19:30</p>
+                                <h4 class="font-bold text-slate-900 text-sm mt-0.5">Baggage &amp; Duty-Free Setup</h4>
+                                <p class="text-slate-500 text-xs mt-1">Collect your three large checked suitcases (20kg each) and three cabin bags (10kg each). Buy Flybus tickets at terminal touch-screen kiosks.</p>
+                            </div>
+                            <div class="relative pl-6">
+                                <span class="absolute left-[-6px] top-1.5 w-3.5 h-3.5 rounded-full bg-sky-500 border-2 border-white"></span>
+                                <p class="text-xs font-semibold text-sky-600">19:45 - 20:30</p>
+                                <h4 class="font-bold text-slate-900 text-sm mt-0.5">Flybus Transit to Hamraborg</h4>
+                                <p class="text-slate-500 text-xs mt-1">Board the Flybus departing right outside the terminal. Let the driver know your destination is Hamraborg stop in Kópavogur.</p>
+                            </div>
+                            <div class="relative pl-6">
+                                <span class="absolute left-[-6px] top-1.5 w-3.5 h-3.5 rounded-full bg-sky-500 border-2 border-white"></span>
+                                <p class="text-xs font-semibold text-sky-600">20:30 - 20:45</p>
+                                <h4 class="font-bold text-slate-900 text-sm mt-0.5">Taxi Transfer to Cozy HQ</h4>
+                                <p class="text-slate-500 text-xs mt-1">Exit Flybus at Kópavogur Library (Hamraborg). Take a pre-ordered local Hreyfill taxi for the final 3.5km (approx 2,500 ISK) to Cozy Campers depot.</p>
+                            </div>
+                            <div class="relative pl-6">
+                                <span class="absolute left-[-6px] top-1.5 w-3.5 h-3.5 rounded-full bg-sky-500 border-2 border-white"></span>
+                                <p class="text-xs font-semibold text-sky-600">20:45</p>
+                                <h4 class="font-bold text-emerald-600 text-sm mt-0.5">After-Hours Self-Service Key Pick-up</h4>
+                                <p class="text-slate-500 text-xs mt-1">Input your keybox access pin at Kársnesbraut 106. Conduct your digital walk-around inspection on your phone before unlocking the vehicle doors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Logistics Warning & Checkboxes -->
+                <div class="space-y-6">
+                    <div class="bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                        <h4 class="text-amber-900 font-bold text-sm mb-3 flex items-center space-x-2">
+                            <span>⚠️</span> <span>Keybox Critical Regulations</span>
+                        </h4>
+                        <ul class="space-y-3 text-xs text-amber-800 leading-relaxed">
+                            <li class="flex items-start space-x-2">
+                                <span class="font-bold text-base mt-[-2px]">•</span>
+                                <span><strong>48-Hour Deadline:</strong> Primary driver must complete online check-in at least 48 hours before rental start. If not completed, the keybox remains unprogrammed!</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="font-bold text-base mt-[-2px]">•</span>
+                                <span><strong>Nighttime Winds:</strong> Windchill at landing hours drops down to 6°C - 9°C. Keep your windproof shell jackets packed in the outer pocket of your cabin bags for quick access.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-4">
+                        <h4 class="font-bold text-slate-900 text-sm">Cozy 3 M Fleet Parameters</h4>
+                        <div class="space-y-3 text-xs">
+                            <div class="flex justify-between py-2 border-b border-slate-100">
+                                <span class="text-slate-500">Chassis Dimensions</span>
+                                <span class="font-bold text-slate-800">5.4m Length / 1.4m Height</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-100">
+                                <span class="text-slate-500">Bed Platform Size</span>
+                                <span class="font-bold text-slate-800">160cm x 193cm (Convertible)</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-100">
+                                <span class="text-slate-500">Heating Utility</span>
+                                <span class="font-bold text-slate-800">Webasto Diesel (Connected to 80L tank)</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-100">
+                                <span class="text-slate-500">Recharge Method</span>
+                                <span class="font-bold text-slate-800">115W Roof Solar + Alternator charging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: PACKING ==================== -->
+        <section id="content-packing" class="space-y-8 hidden">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <h3 class="text-lg font-bold text-slate-900">Interactive Sourcing &amp; Packing Guide</h3>
+                <p class="text-sm text-slate-500 mt-1">Checked items are saved automatically to your browser cache for offline use.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Group 1: From Amsterdam -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-4">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-slate-100">
+                        <span class="text-sky-500 text-lg">🇳🇱</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Bring From Amsterdam</h4>
+                    </div>
+                    <div class="space-y-3" id="pack-amsterdam">
+                        <!-- Items rendered via JavaScript to support interactive localStorage checking -->
+                    </div>
+                </div>
+
+                <!-- Group 2: Buy on Day 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-4">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-slate-100">
+                        <span class="text-amber-500 text-lg">🛒</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Buy Day 1 (Kópavogur)</h4>
+                    </div>
+                    <div class="space-y-3" id="pack-day1">
+                        <!-- Items rendered via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Group 3: Buy on Road -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-4">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-slate-100">
+                        <span class="text-emerald-500 text-lg">🛣️</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Buy Along The Way</h4>
+                    </div>
+                    <div class="space-y-3" id="pack-road">
+                        <!-- Items rendered via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB: CALCULATORS ==================== -->
+        <section id="content-calc" class="space-y-8 hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Calculator 1: Luggage Tetris Warning Tool -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Van Luggage Space Advisor</h3>
+                        <p class="text-xs text-slate-500 mt-1">Estimate physical volume inside the Cozy 3 M living cabin during transit.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Checked Hard Cases (20kg limit)</label>
+                            <input type="number" id="calc-hard" min="0" max="6" value="3" oninput="calculateCabinTetris()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Cabin / Soft Carry-On Bags (10kg limit)</label>
+                            <input type="number" id="calc-soft" min="0" max="6" value="3" oninput="calculateCabinTetris()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+                        </div>
+                    </div>
+
+                    <div id="tetris-result" class="p-4 rounded-xl">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Calculator 2: Ferry Baldur Pricing Tool -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Ferry Baldur Cost Calculator</h3>
+                        <p class="text-xs text-slate-500 mt-1">Instantly estimate crossing fares based on custom specs and passengers.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Vehicle Classification / Length (meters)</label>
+                            <select id="ferry-len" onchange="calculateFerryFare()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+                                <option value="5.4" selected>Cozy 3 M (5.4m total chassis)</option>
+                                <option value="4.9">Compact Camper (under 5.0m)</option>
+                                <option value="6.5">Large Motorhome (over 6.0m)</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Adult Passengers</label>
+                                <input type="number" id="ferry-adults" min="1" max="5" value="2" oninput="calculateFerryFare()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Child Age (Aug 5 Crossing)</label>
+                                <input type="number" id="ferry-child-age" min="0" max="17" value="11" oninput="calculateFerryFare()" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-2">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-500">Vehicle Base + Extra Length Fare</span>
+                            <span class="font-bold text-slate-800" id="ferry-veh-fare">13,800 ISK</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-500">Adult Pass tickets</span>
+                            <span class="font-bold text-slate-800" id="ferry-adult-fare">15,400 ISK</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-500">Child ticket (turning 12 on Aug 7)</span>
+                            <span class="font-bold text-slate-800 text-emerald-600" id="ferry-child-fare">0 ISK (Free)</span>
+                        </div>
+                        <div class="flex justify-between pt-2 border-t border-slate-200 text-sm font-bold">
+                            <span class="text-slate-900">Total Crossing Fee</span>
+                            <span class="text-sky-600" id="ferry-total-fare">29,200 ISK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6 border-b border-slate-800 pb-8 mb-8">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🌋</span>
+                    <span class="text-white font-bold text-base">Iceland 2026 Portal</span>
+                </div>
+                <div class="text-xs text-slate-500">
+                    Designed specifically for family camper expeditions. All state persistent offline.
+                </div>
+            </div>
+            <p class="text-xs">&copy; 2026 Iceland Trip Hub. Under license of standard adventure planning.</p>
+        </div>
+    </footer>
+
+    <script>
+        // System Data
+        const amsterdamList = [
+            { id: "ams-layers", name: "3-Layer shell system (thermal base, fleece mid, wind/water shell)" },
+            { id: "ams-boots", name: "Waterproof, broken-in trail boots" },
+            { id: "ams-masks", name: "Premium contoured sleep eye masks" },
+            { id: "ams-duffels", name: "Soft duffels & color-coded packing cubes" },
+            { id: "ams-chargers", name: "12V circular adapter and 2m long cords" },
+            { id: "ams-protein", name: "Vegetarian dry snacks & meal powders (up to 10kg/person limit)" },
+            { id: "ams-towels", name: "Microfiber quick-dry towels" }
+        ];
+
+        const day1List = [
+            { id: "d1-water", name: "5L mineral water jugs" },
+            { id: "d1-vegan", name: "Oumph! plant proteins & dairy alternatives" },
+            { id: "d1-stables", name: "Staples grains & wraps from budget Bónus" },
+            { id: "d1-soap", name: "Biodegradable dish soap & soft sponge" }
+        ];
+
+        const roadList = [
+            { id: "rd-diesel", name: "Diesel top-up (frequent checks in Westfjords)" },
+            { id: "rd-gas", name: "Camping gas canisters (EN 417 screw-on threads)" },
+            { id: "rd-bread", name: "Fresh local sourdough bakeries stops" },
+            { id: "rd-washer", name: "Windshield washer mud-clearing fluids" }
+        ];
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('active', 'border-b-2', 'border-sky-600', 'text-sky-600');
+                btn.classList.add('border-transparent', 'text-slate-500');
+            });
+            const activeBtn = document.getElementById(`tab-${tabId}`);
+            activeBtn.classList.add('active', 'border-b-2', 'border-sky-600', 'text-sky-600');
+            activeBtn.classList.remove('border-transparent', 'text-slate-500');
+
+            document.getElementById('content-itinerary').classList.add('hidden');
+            document.getElementById('content-logistics').classList.add('hidden');
+            document.getElementById('content-packing').classList.add('hidden');
+            document.getElementById('content-calc').classList.add('hidden');
+
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+        }
+
+        // Filter Logic for Itinerary Days
+        function filterDays(category) {
+            document.querySelectorAll('.day-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-slate-900', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+            });
+
+            const cards = document.querySelectorAll('.day-card');
+            cards.forEach(card => card.classList.remove('hidden'));
+
+            if (category === 'all') {
+                event.target.classList.add('bg-slate-900', 'text-white');
+            } else if (category === 'gems') {
+                event.target.classList.add('bg-slate-900', 'text-white');
+                cards.forEach(card => {
+                    if (card.getAttribute('data-category') !== 'gems') card.classList.add('hidden');
+                });
+            } else if (category === 'highlands') {
+                event.target.classList.add('bg-slate-900', 'text-white');
+                cards.forEach(card => {
+                    if (card.getAttribute('data-category') !== 'highlands') card.classList.add('hidden');
+                });
+            }
+        }
+
+        // Packing Render & Persistent Storage Setup
+        function renderPackingChecklists() {
+            renderSection('pack-amsterdam', amsterdamList);
+            renderSection('pack-day1', day1List);
+            renderSection('pack-road', roadList);
+        }
+
+        function renderSection(elementId, items) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = '';
+            items.forEach(item => {
+                const isChecked = localStorage.getItem(item.id) === 'true';
+                const checkClass = isChecked ? 'line-through text-slate-400' : 'text-slate-700';
+                container.innerHTML += `
+                    <label class="flex items-start space-x-3 p-2 hover:bg-slate-50 rounded-lg cursor-pointer transition-all">
+                        <input type="checkbox" id="${item.id}" ${isChecked ? 'checked' : ''} onchange="toggleItem('${item.id}')" class="mt-1 rounded text-sky-600 focus:ring-sky-500 w-4.5 h-4.5">
+                        <span class="text-xs ${checkClass}" id="lbl-${item.id}">${item.name}</span>
+                    </label>
+                `;
+            });
+        }
+
+        function toggleItem(id) {
+            const checkbox = document.getElementById(id);
+            const label = document.getElementById(`lbl-${id}`);
+            localStorage.setItem(id, checkbox.checked);
+            if (checkbox.checked) {
+                label.classList.add('line-through', 'text-slate-400');
+            } else {
+                label.classList.remove('line-through', 'text-slate-400');
+            }
+        }
+
+        // Dynamic Space Advisor Logic
+        function calculateCabinTetris() {
+            const hards = parseInt(document.getElementById('calc-hard').value) || 0;
+            const softs = parseInt(document.getElementById('calc-soft').value) || 0;
+            const resultBox = document.getElementById('tetris-result');
+
+            let alertType = "bg-emerald-50 border border-emerald-200 text-emerald-800";
+            let msg = "";
+
+            if (hards <= 2 && (hards + softs) <= 4) {
+                msg = `<strong>Perfect Cozy Fit:</strong> Your luggage packs beautifully inside the Cozy 3 M under-bench cabinets. The internal cabin will remain fully accessible during transit!`;
+            } else if (hards === 3 && softs <= 3) {
+                alertType = "bg-amber-50 border border-amber-200 text-amber-800";
+                msg = `<strong>Warning - Cabin Tetris:</strong> With 3 large hard-sided cases, you will exceed cozy's standard cabinet capacity. At night, you will have to lift and stack all suitcases onto the front driver/passenger seats to unfold the sofa bed!`;
+            } else {
+                alertType = "bg-rose-50 border border-rose-200 text-rose-800";
+                msg = `<strong>Overload Danger:</strong> Total baggage exceeds vehicle storage limit! The cabin will be heavily obstructed, making it difficult to access the 21L fridge, water sink, and folding table. Swapping hard cases for soft-sided duffel bags is highly recommended.`;
+            }
+
+            resultBox.className = `p-4 rounded-xl text-xs leading-relaxed ${alertType}`;
+            resultBox.innerHTML = msg;
+        }
+
+        // Dynamic Ferry Baldur Pricing Logic
+        function calculateFerryFare() {
+            const len = parseFloat(document.getElementById('ferry-len').value) || 5.4;
+            const adults = parseInt(document.getElementById('ferry-adults').value) || 2;
+            const childAge = parseInt(document.getElementById('ferry-child-age').value) || 11;
+
+            let vehBase = 11300; // base rate up to 5 meters
+            if (len > 5.0) {
+                const overage = Math.ceil(len - 5.0);
+                vehBase += overage * 2500;
+            }
+
+            const adultFare = adults * 7700;
+            const childFare = childAge >= 12 ? 3850 : 0; // free under 12 during Aug crossing dates
+            const total = vehBase + adultFare + childFare;
+
+            document.getElementById('ferry-veh-fare').innerText = `${vehBase.toLocaleString()} ISK`;
+            document.getElementById('ferry-adult-fare').innerText = `${adultFare.toLocaleString()} ISK`;
+            document.getElementById('ferry-child-fare').innerText = childAge >= 12 ? `${childFare.toLocaleString()} ISK` : '0 ISK (Free)';
+            document.getElementById('ferry-total-fare').innerText = `${total.toLocaleString()} ISK`;
+        }
+
+        // Boot Init execution
+        window.onload = function() {
+            renderPackingChecklists();
+            calculateCabinTetris();
+            calculateFerryFare();
+        };
+    </script>
+</body>
+</html>

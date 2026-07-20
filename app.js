@@ -17,6 +17,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 1: Arrival & Geothermal Beginnings",
     category: "south",
     drivingTime: "~35 min (~35 km)",
+    walkDistance: "~1 km",
     route: "Keflavík Airport ➔ Kópavogur ➔ Sandgerði",
     campsite: "Sandgerði Campsite (Camping Card)",
     poolShower: "Sandgerðislaug (Geothermal pool, hot tubs & indoor showers right in Sandgerði)",
@@ -49,6 +50,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 1: Arrival & Geothermal Beginnings",
     category: "highlights",
     drivingTime: "~2.5 hours (~190 km)",
+    walkDistance: "~6 km",
     route: "Sandgerði ➔ Blue Lagoon ➔ Kópavogur ➔ Thingvellir ➔ Strokkur ➔ Gullfoss ➔ Gjáin ➔ Hella",
     campsite: "Gaddstaðaflatir Hella Campsite (Camping Card)",
     poolShower: "Sundlaugin Hella (Geothermal heated pool, water slides & hot tubs right next to camp)",
@@ -101,6 +103,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 2: The Highlands & The South Coast Coastline",
     category: "highlands",
     drivingTime: "0 min (Camper parked at Hella; 4x4 Bus day)",
+    walkDistance: "~8.5 km",
     route: "Hella ➔ Landmannalaugar (4x4 Bus) ➔ Hella",
     campsite: "Gaddstaðaflatir Hella Campsite (Night 2 - Camping Card)",
     poolShower: "Landmannalaugar Natural Hot River Bath or Sundlaugin Hvolsvelli / Hella Pool",
@@ -128,6 +131,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 2: The Highlands & The South Coast Coastline",
     category: "highlights",
     drivingTime: "~2 hours (~140 km)",
+    walkDistance: "~6.5 km",
     route: "Hella ➔ Seljalandsfoss ➔ Gljúfrabúi ➔ Kvernufoss ➔ Skógafoss ➔ Dyrhólaey ➔ Reynisfjara ➔ Vík ➔ Kleifarmörk",
     campsite: "Kleifarmörk Campsite (Kirkjubæjarklaustur) (Camping Card)",
     poolShower: "Sundlaugin Kirkjubæjarklaustri (Geothermal pool & hot tubs 5 min from Kleifarmörk camp)",
@@ -180,6 +184,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 3: Canyons & Glaciers",
     category: "south",
     drivingTime: "~1.5 hours (~100 km)",
+    walkDistance: "~5.5 km",
     route: "Kleifarmörk ➔ Fjaðrárgljúfur Canyon ➔ Skaftafell",
     campsite: "Skaftafell Campground (Camping Card)",
     poolShower: "Sundlaugin Kirkjubæjarklaustri (Morning) or Höfn Geothermal Swimming Pool (Evening)",
@@ -217,6 +222,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 3: Canyons & Glaciers",
     category: "highlights",
     drivingTime: "~2.5 hours (~200 km)",
+    walkDistance: "~7.5 km",
     route: "Skaftafell ➔ Jökulsárlón ➔ Diamond Beach ➔ Múlagljúfur ➔ Vestrahorn ➔ Djúpivogur",
     campsite: "Djúpivogur Campsite (Camping Card)",
     poolShower: "Sundlaug Djúpavogs (Quiet village geothermal pool & hot tubs right in Djúpivogur)",
@@ -264,6 +270,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 4: East Fjords to the Volcanic North",
     category: "south",
     drivingTime: "~3 hours (~220 km)",
+    walkDistance: "~4.5 km",
     route: "Djúpivogur ➔ Hengifoss ➔ Egilsstaðir ➔ Vök Baths ➔ Seyðisfjörður",
     campsite: "Egilsstaðir Campsite (Camping Card)",
     poolShower: "Vök Baths (Floating geothermal pools) or Sundlaug Egilsstaða (Town pool & steam bath)",
@@ -306,6 +313,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 4: East Fjords to the Volcanic North",
     category: "highlights",
     drivingTime: "~2.5 hours (~160 km)",
+    walkDistance: "~5 km",
     route: "Seyðisfjörður ➔ Road 923 ➔ Stuðlagil ➔ Möðrudalur",
     campsite: "Möðrudalur - Fjalladýrð Campsite (Camping Card)",
     poolShower: "Sundlaug Egilsstaða (Before highland drive) or Möðrudalur Farmstead Showers",
@@ -333,6 +341,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 4: East Fjords to the Volcanic North",
     category: "north",
     drivingTime: "~1.5 hours (~110 km)",
+    walkDistance: "~5.5 km",
     route: "Möðrudalur ➔ Hverir ➔ Grjótagjá ➔ Dimmuborgir ➔ Mývatn Earth Lagoon ➔ Daddi's Pizza ➔ Húsavík",
     campsite: "Húsavík Campsite / Vogar Campsite (Camping Card)",
     poolShower: "Mývatn Earth Lagoon Soak or Húsavíkurlaug (Town geothermal pool & hot tubs)",
@@ -380,6 +389,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 4: East Fjords to the Volcanic North",
     category: "north",
     drivingTime: "~3.5 hours (~240 km)",
+    walkDistance: "~3.5 km",
     route: "Húsavík ➔ Goðafoss ➔ Akureyri ➔ Skagaströnd / Hamrar",
     campsite: "Skagaströnd Campsite / Camping Hamrar (Camping Card)",
     poolShower: "Sundlaug Akureyrar (Iconic geothermal water park, slides & hot tubs) or Skagastrandarlaug",
@@ -417,6 +427,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 5: The Remote Westfjords Detour",
     category: "westfjords",
     drivingTime: "~4.5 hours (~350 km)",
+    walkDistance: "~2.5 km",
     route: "Skagaströnd ➔ Route 61 ➔ Seal Lookouts ➔ Ísafjörður",
     campsite: "Tungudalur Campsite (Ísafjörður) (Camping Card)",
     poolShower: "Sundhöll Ísafjarðar (Ísafjörður pool) or Reykjanes Geothermal Pool (Fjord warm pool along Route 61)",
@@ -449,6 +460,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 5: The Remote Westfjords Detour",
     category: "westfjords",
     drivingTime: "~2.5 hours (~160 km)",
+    walkDistance: "~3.5 km",
     route: "Ísafjörður ➔ Dynjandisheiði ➔ Dynjandi ➔ Tálknafjörður",
     campsite: "Tálknafjörður / Flókalundur Campsite (Camping Card)",
     poolShower: "Pollurinn Geothermal Hot Tubs (Fjordview hot tubs in Tálknafjörður) or Sundlaugin Tálknafirði",
@@ -476,6 +488,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 5: The Remote Westfjords Detour",
     category: "westfjords",
     drivingTime: "~2.5 hours camper (~120 km) + 2.5 hr Ferry",
+    walkDistance: "~2 km",
     route: "Tálknafjörður ➔ Brjánslækur ➔ Ferry Baldur ➔ Stykkishólmur ➔ Hvalfjörður",
     campsite: "Tjaldsvæði að Hlöðum (Hvalfjörður) (Camping Card)",
     poolShower: "Stykkishólmslaug (Geothermal pool with carbonated mineral hot tubs at Stykkishólmur harbor) or Hlaðir Pool",
@@ -503,6 +516,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 6: Capital Celebrations & Departure",
     category: "south",
     drivingTime: "~2 hours (~150 km)",
+    walkDistance: "~3 km",
     route: "Hvalfjörður ➔ Hraunfossar ➔ Deildartunguhver ➔ Hvalfjörður",
     campsite: "Tjaldsvæði að Hlöðum (Night 2 - Camping Card)",
     poolShower: "Hlaðir Geothermal Pool (Located directly at Tjaldsvæði að Hlöðum campsite) or Krauma Geothermal Baths",
@@ -535,6 +549,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 6: Capital Celebrations & Departure",
     category: "capital",
     drivingTime: "~1.5 hours (~110 km)",
+    walkDistance: "~4.5 km",
     route: "Hvalfjörður ➔ Hveragerði ➔ Reykjavík ➔ Sandgerði",
     campsite: "Sandgerði Campsite (Camping Card)",
     poolShower: "Laugardalslaug (Reykjavík's flagship geothermal pool complex with 50m pool, thermal tubs & slides)",
@@ -582,6 +597,7 @@ const DEFAULT_ITINERARY = [
     phase: "Phase 6: Capital Celebrations & Departure",
     category: "capital",
     drivingTime: "~1.2 hours (~65 km)",
+    walkDistance: "~1 km",
     route: "Sandgerði ➔ Kópavogur (Cozy HQ) ➔ KEF Airport",
     campsite: "Home Flight (FI1500 to AMS)",
     poolShower: "Sandgerðislaug (Morning refresh option before KEF airport departure)",
@@ -674,6 +690,9 @@ function loadStoredData() {
           if (defDay) {
             if (!d.poolShower || d.poolShower.trim() === '') {
               d.poolShower = defDay.poolShower;
+            }
+            if (!d.walkDistance || d.walkDistance.trim() === '') {
+              d.walkDistance = defDay.walkDistance;
             }
           }
         });
@@ -861,9 +880,12 @@ function renderItineraryGrid() {
 
           <div class="campsite-info-box">
             <div style="width: 100%;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.25rem;">
                 <span style="font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase;">Overnight Camp</span>
-                <span style="font-size: 0.75rem; color: var(--ice-600); font-weight: 600;">⏱️ ${escapeHtml(day.drivingTime)}</span>
+                <div style="display: flex; gap: 0.5rem; font-size: 0.73rem; font-weight: 600;">
+                  <span style="color: var(--ice-600);" title="Driving distance">🚗 ${escapeHtml(day.drivingTime)}</span>
+                  <span style="color: #2563eb;" title="Walking/Hiking distance">🥾 ${escapeHtml(day.walkDistance || '~2-4 km')}</span>
+                </div>
               </div>
               <div class="campsite-name">⛺ ${escapeHtml(day.campsite)}</div>
               ${day.poolShower ? `
@@ -914,6 +936,8 @@ function openDayViewModal(id) {
   document.getElementById('view-modal-date').innerText = day.date;
   document.getElementById('view-modal-phase').innerText = day.phase;
   document.getElementById('view-modal-driving').innerText = day.drivingTime;
+  const walkEl = document.getElementById('view-modal-walking');
+  if (walkEl) walkEl.innerText = day.walkDistance || 'Moderate walking (~2-4 km)';
   document.getElementById('view-modal-route').innerText = day.route;
   document.getElementById('view-modal-campsite').innerText = day.campsite;
   const poolEl = document.getElementById('view-modal-pool');
@@ -1093,6 +1117,8 @@ function openDayModal(id) {
   document.getElementById('edit-day-phase').value = day.phase;
   document.getElementById('edit-day-category').value = day.category || 'standard';
   document.getElementById('edit-day-driving').value = day.drivingTime;
+  const editWalkEl = document.getElementById('edit-day-walking');
+  if (editWalkEl) editWalkEl.value = day.walkDistance || '';
   document.getElementById('edit-day-route').value = day.route;
   document.getElementById('edit-day-campsite').value = day.campsite;
   const editPoolEl = document.getElementById('edit-day-pool');
@@ -1163,6 +1189,8 @@ function saveDayModalChanges() {
   day.phase = document.getElementById('edit-day-phase').value;
   day.category = document.getElementById('edit-day-category').value;
   day.drivingTime = document.getElementById('edit-day-driving').value;
+  const editWalkElSave = document.getElementById('edit-day-walking');
+  if (editWalkElSave) day.walkDistance = editWalkElSave.value.trim();
   day.route = document.getElementById('edit-day-route').value;
   day.campsite = document.getElementById('edit-day-campsite').value;
   const editPoolElSave = document.getElementById('edit-day-pool');

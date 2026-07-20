@@ -620,23 +620,69 @@ const DEFAULT_ITINERARY = [
 ];
 
 const DEFAULT_PACKING = [
-  { id: "ams-layers", name: "3-Layer shell system (thermal base, fleece mid, wind/water shell)", cat: "ams", checked: false },
-  { id: "ams-boots", name: "Waterproof, broken-in trail boots", cat: "ams", checked: false },
-  { id: "ams-masks", name: "Premium contoured sleep eye masks (Midnight Sun)", cat: "ams", checked: false },
-  { id: "ams-duffels", name: "Soft duffels & color-coded packing cubes", cat: "ams", checked: false },
-  { id: "ams-chargers", name: "12V circular adapter and 2m long cords", cat: "ams", checked: false },
-  { id: "ams-protein", name: "Vegetarian dry snacks & meal powders", cat: "ams", checked: false },
-  { id: "ams-towels", name: "Microfiber quick-dry towels", cat: "ams", checked: false },
-  
-  { id: "d1-water", name: "5L mineral water jugs (Bonus / Krónan)", cat: "d1", checked: false },
-  { id: "d1-vegan", name: "Oumph! plant proteins & dairy alternatives", cat: "d1", checked: false },
-  { id: "d1-staples", name: "Staple grains & wraps from budget Bónus", cat: "d1", checked: false },
-  { id: "d1-soap", name: "Biodegradable dish soap & soft sponge", cat: "d1", checked: false },
+  // 🇳🇱 BRING FROM AMSTERDAM - Clothing & Footwear
+  { id: "ams-clothing-1", name: "Waterproof & windproof hardshell jacket with hood (GORE-TEX)", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-clothing-2", name: "Waterproof rain pants (essential for waterfall spray & heavy rain)", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-clothing-3", name: "Fleece or down insulator mid-layer jacket", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-clothing-4", name: "Thermal base layer tops & bottoms (Merino wool / synthetic)", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-clothing-5", name: "Quick-dry trekking pants & fleece-lined leggings", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-clothing-6", name: "Merino wool hiking socks (4-5 pairs) & daily socks", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-clothing-7", name: "Thermal wool beanie, headband & neck gaiter / Buff (against arctic wind)", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-clothing-8", name: "Windproof gloves / mittens & waterproof overgloves", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-clothing-9", name: "Swimwear (2 sets for natural hot springs & pools)", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-footwear-1", name: "Waterproof, broken-in trail hiking boots (ankle support)", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-footwear-2", name: "Slip-on campsite shoes / Crocs / sandals (for van & communal pool showers)", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-footwear-3", name: "Water shoes / neoprene booties (for hot spring river beds & rocky soaks)", cat: "ams", group: "Clothing & Footwear", checked: false },
+  { id: "ams-footwear-4", name: "Collapsible trekking poles & microspikes / crampons", cat: "ams", group: "Clothing & Footwear", checked: false },
 
-  { id: "rd-diesel", name: "Diesel top-up (frequent checks in Westfjords)", cat: "rd", checked: false },
-  { id: "rd-gas", name: "Camping gas canisters (EN 417 screw-on threads)", cat: "rd", checked: false },
-  { id: "rd-bread", name: "Fresh local sourdough bakery stops", cat: "rd", checked: false },
-  { id: "rd-washer", name: "Windshield washer mud-clearing fluid", cat: "rd", checked: false }
+  // 🇳🇱 BRING FROM AMSTERDAM - Hygiene, Toiletries & Personal Care
+  { id: "ams-hygiene-1", name: "Toothbrushes & biodegradable toothpaste", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-2", name: "Microfiber quick-dry bath towels & hand towels (2 per person)", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-3", name: "Toilet paper rolls (2-3 stored in Ziploc bags for emergency stops)", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-4", name: "Biodegradable body wash & travel shampoo / soap bar", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-5", name: "Wet wipes & eco-friendly flushable wet tissues", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-6", name: "High-SPF 50 broad spectrum sunscreen & SPF 30 lip balm (windburn protection)", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-7", name: "Moisturizing skin cream / Nivea tin (dry arctic wind remedy)", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-8", name: "Hand sanitizer gel bottles (pocket size + van size)", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-9", name: "Compact hairbrush / comb, hair ties & nail clippers / tweezers", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+  { id: "ams-hygiene-10", name: "Feminine hygiene supplies & Ziploc disposal bags", cat: "ams", group: "Hygiene & Toiletries", checked: false },
+
+  // 🇳🇱 BRING FROM AMSTERDAM - Campervan Living, Tech & Electronics
+  { id: "ams-tech-1", name: "Premium contoured sleep eye masks (CRITICAL for 24-hour Midnight Sun!)", cat: "ams", group: "Camper Living & Tech", checked: false },
+  { id: "ams-tech-2", name: "Noise-blocking earplugs (for windy campsite nights & van rain noise)", cat: "ams", group: "Camper Living & Tech", checked: false },
+  { id: "ams-tech-3", name: "Soft duffel bags & color-coded packing cubes (NO hard suitcases!)", cat: "ams", group: "Camper Living & Tech", checked: false },
+  { id: "ams-tech-4", name: "12V circular car adapter & 2m long USB charging cords (reaches bed & seats)", cat: "ams", group: "Camper Living & Tech", checked: false },
+  { id: "ams-tech-5", name: "Multi-port fast wall charger block & Euro plug adapters (Type C/F 230V)", cat: "ams", group: "Camper Living & Tech", checked: false },
+  { id: "ams-tech-6", name: "Portable power bank (20,000mAh+) for long hikes", cat: "ams", group: "Camper Living & Tech", checked: false },
+  { id: "ams-tech-7", name: "Headlamp with red light mode & compact hanging LED lantern", cat: "ams", group: "Camper Living & Tech", checked: false },
+  { id: "ams-tech-8", name: "Waterproof phone pouch with neck lanyard (for Blue Lagoon & pool soaks)", cat: "ams", group: "Camper Living & Tech", checked: false },
+
+  // 🇳🇱 BRING FROM AMSTERDAM - First Aid & Medical
+  { id: "ams-medical-1", name: "First aid kit (bandages, antiseptic wipes, sterile gauze, medical tape)", cat: "ams", group: "First Aid & Health", checked: false },
+  { id: "ams-medical-2", name: "Blister plasters / Compeed pads & Moleskin (essential for canyon hikes)", cat: "ams", group: "First Aid & Health", checked: false },
+  { id: "ams-medical-3", name: "Motion sickness tablets / Sea-Bands (for Ferry Baldur & whale boat)", cat: "ams", group: "First Aid & Health", checked: false },
+  { id: "ams-medical-4", name: "Pain relievers (Ibuprofen / Paracetamol)", cat: "ams", group: "First Aid & Health", checked: false },
+  { id: "ams-medical-5", name: "Personal prescription medications & antihistamines / allergy tablets", cat: "ams", group: "First Aid & Health", checked: false },
+  { id: "ams-medical-6", name: "Electrolyte hydration powder packets / tablets", cat: "ams", group: "First Aid & Health", checked: false },
+
+  // 🛒 BUY DAY 1 (KÓPAVOGUR) - Groceries & Kitchen Supplies
+  { id: "d1-water", name: "5L mineral water jugs (reusable refills for van tank)", cat: "d1", group: "Groceries & Kitchen", checked: false },
+  { id: "d1-vegan", name: "Vegetarian protein staples (Oumph!, tofu, canned chickpeas, beans, lentils)", cat: "d1", group: "Groceries & Kitchen", checked: false },
+  { id: "d1-staples", name: "Staple grains (oats, pasta, rice, quinoa) & wraps from budget Bónus", cat: "d1", group: "Groceries & Kitchen", checked: false },
+  { id: "d1-soap", name: "Biodegradable dish soap & soft non-scratch sponge", cat: "d1", group: "Groceries & Kitchen", checked: false },
+  { id: "d1-ziploc", name: "Ziploc bags (various sizes) & heavy-duty trash bags", cat: "d1", group: "Groceries & Kitchen", checked: false },
+  { id: "d1-containers", name: "Aluminum foil & reusable plastic food container boxes / Tupperware", cat: "d1", group: "Groceries & Kitchen", checked: false },
+  { id: "d1-drinks", name: "Coffee / tea bags, plant milks (oat/soy), condiments (salt, pepper, olive oil)", cat: "d1", group: "Groceries & Kitchen", checked: false },
+  { id: "d1-produce", name: "Fruit & produce haul (apples, bananas, carrots, cucumbers, bell peppers)", cat: "d1", group: "Groceries & Kitchen", checked: false },
+  { id: "d1-snacks", name: "Road trip snacks (nuts, trail mix, dried fruit, dark chocolate bars)", cat: "d1", group: "Groceries & Kitchen", checked: false },
+
+  // 🛣️ BUY ALONG THE WAY - Road Trip Supplies & Maintenance
+  { id: "rd-diesel", name: "Diesel fuel top-ups (frequent checks in Westfjords & Highlands)", cat: "rd", group: "Road Supplies", checked: false },
+  { id: "rd-gas", name: "Camping gas canisters (EN 417 screw-on threads for van stove)", cat: "rd", group: "Road Supplies", checked: false },
+  { id: "rd-bread", name: "Fresh local sourdough bakery loaves & pastries", cat: "rd", group: "Road Supplies", checked: false },
+  { id: "rd-midgenets", name: "Bug head-nets (essential protection against Mývatn midges!)", cat: "rd", group: "Road Supplies", checked: false },
+  { id: "rd-washer", name: "Windshield washer mud-clearing fluid", cat: "rd", group: "Road Supplies", checked: false },
+  { id: "rd-wipes", name: "Microfiber glass cleaning cloth & dashboard interior wipes", cat: "rd", group: "Road Supplies", checked: false }
 ];
 
 // App State
@@ -708,6 +754,11 @@ function loadStoredData() {
   if (storedPacking) {
     try {
       packingData = JSON.parse(storedPacking);
+      DEFAULT_PACKING.forEach(defItem => {
+        if (!packingData.some(item => item.id === defItem.id)) {
+          packingData.push(JSON.parse(JSON.stringify(defItem)));
+        }
+      });
     } catch (e) {
       packingData = JSON.parse(JSON.stringify(DEFAULT_PACKING));
     }
@@ -1240,6 +1291,8 @@ function addNewCustomDay() {
   openDayModal(newId);
 }
 
+let packingSearchQuery = '';
+
 // Packing List Render
 function renderPackingLists() {
   const amsContainer = document.getElementById('pack-ams-list');
@@ -1248,20 +1301,63 @@ function renderPackingLists() {
 
   if (!amsContainer || !d1Container || !rdContainer) return;
 
-  amsContainer.innerHTML = renderChecklistCategory('ams');
-  d1Container.innerHTML = renderChecklistCategory('d1');
-  rdContainer.innerHTML = renderChecklistCategory('rd');
+  // Update progress badge
+  const total = packingData.length;
+  const checked = packingData.filter(i => i.checked).length;
+  const badge = document.getElementById('packing-progress-badge');
+  if (badge) {
+    const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+    badge.innerText = `${checked} / ${total} Items Packed (${pct}%)`;
+  }
+
+  amsContainer.innerHTML = renderChecklistCategory('ams', packingSearchQuery);
+  d1Container.innerHTML = renderChecklistCategory('d1', packingSearchQuery);
+  rdContainer.innerHTML = renderChecklistCategory('rd', packingSearchQuery);
 }
 
-function renderChecklistCategory(cat) {
-  const items = packingData.filter(i => i.cat === cat);
-  return items.map(item => `
-    <div class="checklist-item ${item.checked ? 'checked' : ''}">
-      <input type="checkbox" ${item.checked ? 'checked' : ''} onchange="togglePackingItem('${item.id}')" class="checkbox-custom">
-      <span class="checklist-label" onclick="togglePackingItem('${item.id}')">${escapeHtml(item.name)}</span>
-      <button onclick="deletePackingItem('${item.id}')" style="background: none; border: none; color: #ef4444; cursor: pointer; padding: 0.2rem;">✕</button>
+function renderChecklistCategory(cat, query = '') {
+  let items = packingData.filter(i => i.cat === cat);
+  if (query && query.trim() !== '') {
+    const q = query.toLowerCase().trim();
+    items = items.filter(i => i.name.toLowerCase().includes(q) || (i.group && i.group.toLowerCase().includes(q)));
+  }
+
+  if (items.length === 0) {
+    return `<p style="font-size: 0.825rem; color: var(--text-muted); padding: 0.5rem 0;">No items match "${escapeHtml(query)}"</p>`;
+  }
+
+  // Group items by group if present
+  const groups = {};
+  items.forEach(item => {
+    const grp = item.group || 'General Items';
+    if (!groups[grp]) groups[grp] = [];
+    groups[grp].push(item);
+  });
+
+  return Object.entries(groups).map(([groupName, groupItems]) => `
+    <div style="margin-bottom: 0.85rem;">
+      <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--ice-600); border-bottom: 1px solid #e2e8f0; padding-bottom: 0.2rem; margin-bottom: 0.4rem; letter-spacing: 0.5px;">${escapeHtml(groupName)}</div>
+      ${groupItems.map(item => `
+        <div class="checklist-item ${item.checked ? 'checked' : ''}">
+          <input type="checkbox" ${item.checked ? 'checked' : ''} onchange="togglePackingItem('${item.id}')" class="checkbox-custom">
+          <span class="checklist-label" onclick="togglePackingItem('${item.id}')">${escapeHtml(item.name)}</span>
+          <button onclick="deletePackingItem('${item.id}')" style="background: none; border: none; color: #ef4444; cursor: pointer; padding: 0.2rem;" title="Delete Item">✕</button>
+        </div>
+      `).join('')}
     </div>
   `).join('');
+}
+
+function filterPackingItems(val) {
+  packingSearchQuery = val;
+  renderPackingLists();
+}
+
+function resetPackingFilter() {
+  packingSearchQuery = '';
+  const input = document.getElementById('packing-search-input');
+  if (input) input.value = '';
+  renderPackingLists();
 }
 
 function togglePackingItem(id) {

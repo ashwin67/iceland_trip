@@ -15,10 +15,11 @@ const DEFAULT_ITINERARY = [
     date: "July 24, 2026",
     title: "Arrival & Late-Night Launch",
     phase: "Phase 1: Arrival & Geothermal Beginnings",
-    category: "standard",
+    category: "south",
     drivingTime: "~35 min (~35 km)",
     route: "Keflavík Airport ➔ Kópavogur ➔ Sandgerði",
     campsite: "Sandgerði Campsite (Camping Card)",
+    poolShower: "Sandgerðislaug (Geothermal pool, hot tubs & indoor showers right in Sandgerði)",
     summary: "Land in Keflavík at 18:20 on flight FI507. Collect 3 hard cases & 3 carry-ons, put on thermal shell, take Flybus to Kópavogur and taxi to Cozy Campers HQ. Pick up vehicle via self-service keybox.",
     notes: "Mandatory: Complete online check-in 48h prior to ensure keybox programming. Windchill drops to 6°C-9°C at night.",
     completed: false,
@@ -46,10 +47,11 @@ const DEFAULT_ITINERARY = [
     date: "July 25, 2026",
     title: "Volcanic Soaks & Golden Circle Sprint",
     phase: "Phase 1: Arrival & Geothermal Beginnings",
-    category: "gems",
+    category: "highlights",
     drivingTime: "~2.5 hours (~190 km)",
     route: "Sandgerði ➔ Blue Lagoon ➔ Kópavogur ➔ Thingvellir ➔ Strokkur ➔ Gullfoss ➔ Gjáin ➔ Hella",
     campsite: "Gaddstaðaflatir Hella Campsite (Camping Card)",
+    poolShower: "Sundlaugin Hella (Geothermal heated pool, water slides & hot tubs right next to camp)",
     summary: "09:00 Blue Lagoon geothermal soak, stock up on vegetarian food at Krónan/Bónus in Kópavogur, explore Thingvellir, Strokkur, Gullfoss, and hike into fairytale Gjáin Valley before camping at Hella.",
     notes: "Park at Stöng ruins for Gjáin Valley to avoid ground ruts with 2WD van.",
     completed: false,
@@ -80,7 +82,7 @@ const DEFAULT_ITINERARY = [
         image: "iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/09_gullfoss_falls.jpg"
       },
       {
-        name: "Gjáin Valley (NEW GEM)",
+        name: "Gjáin Valley",
         desc: "The 'fairytale oasis' emerald volcanic valley.",
         image: "iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/07_gjain_valley.jpg"
       },
@@ -101,6 +103,7 @@ const DEFAULT_ITINERARY = [
     drivingTime: "0 min (Camper parked at Hella; 4x4 Bus day)",
     route: "Hella ➔ Landmannalaugar (4x4 Bus) ➔ Hella",
     campsite: "Gaddstaðaflatir Hella Campsite (Night 2 - Camping Card)",
+    poolShower: "Landmannalaugar Natural Hot River Bath or Sundlaugin Hvolsvelli / Hella Pool",
     summary: "Park 2WD camper securely at Hella. Board 08:45 4x4 Highland Bus at Olís station into Landmannalaugar. Hike rhyolite mountains & soak in natural warm thermal river. Return by 18:00.",
     notes: "Bring waterproof shell, trail boots, swimwear, towel, and packed lunch.",
     completed: false,
@@ -123,10 +126,11 @@ const DEFAULT_ITINERARY = [
     date: "July 27, 2026",
     title: "Thundering Waterfalls & Secret Cliffs",
     phase: "Phase 2: The Highlands & The South Coast Coastline",
-    category: "gems",
+    category: "highlights",
     drivingTime: "~2 hours (~140 km)",
     route: "Hella ➔ Seljalandsfoss ➔ Gljúfrabúi ➔ Kvernufoss ➔ Skógafoss ➔ Dyrhólaey ➔ Reynisfjara ➔ Vík ➔ Kleifarmörk",
     campsite: "Kleifarmörk Campsite (Kirkjubæjarklaustur) (Camping Card)",
+    poolShower: "Sundlaugin Kirkjubæjarklaustri (Geothermal pool & hot tubs 5 min from Kleifarmörk camp)",
     summary: "Walk behind Seljalandsfoss curtain & cave waterfall Gljúfrabúi. Discover hidden canyon waterfall Kvernufoss. Marvel at Skógafoss. View puffins at Dyrhólaey & walk Reynisfjara black sands.",
     notes: "⚠️ Safety Warning: Reynisfjara sneaker waves. Never turn your back to the sea!",
     completed: false,
@@ -137,7 +141,7 @@ const DEFAULT_ITINERARY = [
         image: "iceland_trip_photos/phase_2_the_highlands_and_the_south_coast/13_seljalandsfoss_and_gljufrabui.jpg"
       },
       {
-        name: "Kvernufoss (NEW GEM)",
+        name: "Kvernufoss",
         desc: "Secret walk-behind canyon waterfall next to Skógafoss (20-min flat hike).",
         image: "iceland_trip_photos/phase_2_the_highlands_and_the_south_coast/14_kvernufoss.jpg"
       },
@@ -174,10 +178,11 @@ const DEFAULT_ITINERARY = [
     date: "July 28, 2026",
     title: "Deep Canyons & Basalt Columns",
     phase: "Phase 3: Canyons & Glaciers",
-    category: "standard",
+    category: "south",
     drivingTime: "~1.5 hours (~100 km)",
     route: "Kleifarmörk ➔ Fjaðrárgljúfur Canyon ➔ Skaftafell",
     campsite: "Skaftafell Campground (Camping Card)",
+    poolShower: "Sundlaugin Kirkjubæjarklaustri (Morning) or Höfn Geothermal Swimming Pool (Evening)",
     summary: "Hike the winding green rim trails of Fjaðrárgljúfur Canyon in the morning. Drive across sandur plains to Skaftafell for a short trek to Svartifoss (basalt column waterfall). Overnight among glaciers.",
     notes: "Book Glacier Adventure ice trek at HQ for Day 6 morning.",
     completed: false,
@@ -210,10 +215,11 @@ const DEFAULT_ITINERARY = [
     date: "July 29, 2026",
     title: "Icebergs, Hidden Canyons & Horn Reflection",
     phase: "Phase 3: Canyons & Glaciers",
-    category: "gems",
+    category: "highlights",
     drivingTime: "~2.5 hours (~200 km)",
     route: "Skaftafell ➔ Jökulsárlón ➔ Diamond Beach ➔ Múlagljúfur ➔ Vestrahorn ➔ Djúpivogur",
     campsite: "Djúpivogur Campsite (Camping Card)",
+    poolShower: "Sundlaug Djúpavogs (Quiet village geothermal pool & hot tubs right in Djúpivogur)",
     summary: "Morning Glacier Trek with Glacier Adventure. Watch floating icebergs at Jökulsárlón Glacier Lagoon & crystal ice on Diamond Beach. Hike Jurassic-style Múlagljúfur Canyon. Photograph Vestrahorn at Stokksnes.",
     notes: "Múlagljúfur canyon trail is breathtaking—allow 2.5 hours for full rim hike.",
     completed: false,
@@ -229,7 +235,7 @@ const DEFAULT_ITINERARY = [
         image: "iceland_trip_photos/phase_3_canyons_and_glaciers/24_diamond_beach.jpg"
       },
       {
-        name: "Múlagljúfur Canyon (NEW GEM)",
+        name: "Múlagljúfur Canyon",
         desc: "Spectacular 'Jurassic Park-style' hidden canyon trail with twin waterfalls.",
         image: "iceland_trip_photos/phase_3_canyons_and_glaciers/25_mulagljufur_canyon.jpg"
       },
@@ -256,10 +262,11 @@ const DEFAULT_ITINERARY = [
     date: "July 30, 2026",
     title: "Winding East Fjords & Floating Geothermal Pools",
     phase: "Phase 4: East Fjords to the Volcanic North",
-    category: "standard",
+    category: "south",
     drivingTime: "~3 hours (~220 km)",
     route: "Djúpivogur ➔ Hengifoss ➔ Egilsstaðir ➔ Vök Baths ➔ Seyðisfjörður",
     campsite: "Egilsstaðir Campsite (Camping Card)",
+    poolShower: "Vök Baths (Floating geothermal pools) or Sundlaug Egilsstaða (Town pool & steam bath)",
     summary: "Drive scenic East Fjords. Hike to black basalt cliffs striped with red clay at Hengifoss. Restock in Egilsstaðir and unwind in floating geothermal pools at Vök Baths on Lake Urriðavatn.",
     notes: "Egilsstaðir campsite has premium heated indoor kitchens and laundry.",
     completed: false,
@@ -297,16 +304,17 @@ const DEFAULT_ITINERARY = [
     date: "July 31, 2026",
     title: "Basalt Canyon Floor & Highland Wilderness",
     phase: "Phase 4: East Fjords to the Volcanic North",
-    category: "gems",
+    category: "highlights",
     drivingTime: "~2.5 hours (~160 km)",
     route: "Seyðisfjörður ➔ Road 923 ➔ Stuðlagil ➔ Möðrudalur",
     campsite: "Möðrudalur - Fjalladýrð Campsite (Camping Card)",
+    poolShower: "Sundlaug Egilsstaða (Before highland drive) or Möðrudalur Farmstead Showers",
     summary: "Take Gravel Road 923 (East Side Approach) to hike directly onto Stuðlagil Canyon floor by the turquoise river. Continue across highland tundra to Möðrudalur, Iceland's highest farmstead.",
     notes: "Dettifoss dropped from route to optimize driving speed and prevent van fatigue.",
     completed: false,
     stops: [
       {
-        name: "Stuðlagil Canyon (East Side) (NEW GEM)",
+        name: "Stuðlagil Canyon (East Side)",
         desc: "Hike directly onto the basalt column canyon floor next to the glacier river.",
         image: "iceland_trip_photos/phase_4_east_fjords_to_the_volcanic_north/32_studlagil_canyon.jpg"
       },
@@ -323,10 +331,11 @@ const DEFAULT_ITINERARY = [
     date: "August 1, 2026",
     title: "Mývatn Volcanics & Northern Soaks",
     phase: "Phase 4: East Fjords to the Volcanic North",
-    category: "standard",
+    category: "north",
     drivingTime: "~1.5 hours (~110 km)",
     route: "Möðrudalur ➔ Hverir ➔ Grjótagjá ➔ Dimmuborgir ➔ Mývatn Earth Lagoon ➔ Daddi's Pizza ➔ Húsavík",
     campsite: "Húsavík Campsite / Vogar Campsite (Camping Card)",
+    poolShower: "Mývatn Earth Lagoon Soak or Húsavíkurlaug (Town geothermal pool & hot tubs)",
     summary: "Explore steaming sulfur mud vents at Hverir, step inside thermal Grjótagjá Cave, navigate Dimmuborgir lava maze, soak at Mývatn Earth Lagoon, have vegetarian pizza at Daddi's Pizza, and camp in Húsavík.",
     notes: "Grjótagjá water is too hot for swimming; enjoy the cave view.",
     completed: false,
@@ -369,10 +378,11 @@ const DEFAULT_ITINERARY = [
     date: "August 2, 2026",
     title: "Electric Whale Watching & Forest Base",
     phase: "Phase 4: East Fjords to the Volcanic North",
-    category: "standard",
+    category: "north",
     drivingTime: "~3.5 hours (~240 km)",
     route: "Húsavík ➔ Goðafoss ➔ Akureyri ➔ Skagaströnd / Hamrar",
     campsite: "Skagaströnd Campsite / Camping Hamrar (Camping Card)",
+    poolShower: "Sundlaug Akureyrar (Iconic geothermal water park, slides & hot tubs) or Skagastrandarlaug",
     summary: "09:00 carbon-neutral electric boat tour with North Sailing out of Húsavík to watch humpbacks. Visit historical Goðafoss waterfall. Pass Akureyri to stay at Camping Hamrar or coastal Skagaströnd.",
     notes: "Hvítserkur basalt stack skipped to conserve driving energy.",
     completed: false,
@@ -409,6 +419,7 @@ const DEFAULT_ITINERARY = [
     drivingTime: "~4.5 hours (~350 km)",
     route: "Skagaströnd ➔ Route 61 ➔ Seal Lookouts ➔ Ísafjörður",
     campsite: "Tungudalur Campsite (Ísafjörður) (Camping Card)",
+    poolShower: "Sundhöll Ísafjarðar (Ísafjörður pool) or Reykjanes Geothermal Pool (Fjord warm pool along Route 61)",
     summary: "Depart Ring Road for the spectacular Westfjords loop. Drive paved Route 61 (Djúpvegur) winding around deep fjords. Stop at laybys near Hvítanes to watch wild harbor seals on rocks.",
     notes: "Route 61 is 100% paved and safe. Fill diesel before entering Westfjords.",
     completed: false,
@@ -440,6 +451,7 @@ const DEFAULT_ITINERARY = [
     drivingTime: "~2.5 hours (~160 km)",
     route: "Ísafjörður ➔ Dynjandisheiði ➔ Dynjandi ➔ Tálknafjörður",
     campsite: "Tálknafjörður / Flókalundur Campsite (Camping Card)",
+    poolShower: "Pollurinn Geothermal Hot Tubs (Fjordview hot tubs in Tálknafjörður) or Sundlaugin Tálknafirði",
     summary: "Buy fresh sourdough at Nettó Ísafjörður. Drive carefully over Dynjandisheiði pass. Marvel at Dynjandi, a massive 100m tiered bridal veil waterfall. Overnight at coastal Tálknafjörður.",
     notes: "⚠️ Active construction on Route 60 Dynjandisheiði mountain pass.",
     completed: false,
@@ -462,10 +474,11 @@ const DEFAULT_ITINERARY = [
     date: "August 5, 2026",
     title: "Ferry Baldur Crossing to Fjord Base",
     phase: "Phase 5: The Remote Westfjords Detour",
-    category: "standard",
+    category: "westfjords",
     drivingTime: "~2.5 hours camper (~120 km) + 2.5 hr Ferry",
     route: "Tálknafjörður ➔ Brjánslækur ➔ Ferry Baldur ➔ Stykkishólmur ➔ Hvalfjörður",
     campsite: "Tjaldsvæði að Hlöðum (Hvalfjörður) (Camping Card)",
+    poolShower: "Stykkishólmslaug (Geothermal pool with carbonated mineral hot tubs at Stykkishólmur harbor) or Hlaðir Pool",
     summary: "Board Ferry Baldur at 12:00 from Brjánslækur to Stykkishólmur (2.5 hr scenic cruise). Drive inland past Snæfellsnes directly to quiet greenhouse campsite at Hvalfjörður.",
     notes: "Snæfellsnes loop dropped to minimize long driving hours.",
     completed: false,
@@ -488,10 +501,11 @@ const DEFAULT_ITINERARY = [
     date: "August 6, 2026",
     title: "The Silver Circle & Lava Falls",
     phase: "Phase 6: Capital Celebrations & Departure",
-    category: "standard",
+    category: "south",
     drivingTime: "~2 hours (~150 km)",
     route: "Hvalfjörður ➔ Hraunfossar ➔ Deildartunguhver ➔ Hvalfjörður",
     campsite: "Tjaldsvæði að Hlöðum (Night 2 - Camping Card)",
+    poolShower: "Hlaðir Geothermal Pool (Located directly at Tjaldsvæði að Hlöðum campsite) or Krauma Geothermal Baths",
     summary: "Unwind with a scenic loop of the Silver Circle. See Hraunfossar (waterfalls springing out of lava rock) & Barnafoss. Visit Deildartunguhver, Europe's most powerful boiling hot spring.",
     notes: "No need to re-pack van tonight; staying 2nd night at Hvalfjörður base.",
     completed: false,
@@ -519,10 +533,11 @@ const DEFAULT_ITINERARY = [
     date: "August 7, 2026",
     title: "Capital Exploration & Departure Prep",
     phase: "Phase 6: Capital Celebrations & Departure",
-    category: "standard",
+    category: "capital",
     drivingTime: "~1.5 hours (~110 km)",
     route: "Hvalfjörður ➔ Hveragerði ➔ Reykjavík ➔ Sandgerði",
     campsite: "Sandgerði Campsite (Camping Card)",
+    poolShower: "Laugardalslaug (Reykjavík's flagship geothermal pool complex with 50m pool, thermal tubs & slides)",
     summary: "Morning surprise activity in Hveragerði at 09:30. Spend afternoon in downtown Reykjavík: eat Vegan Pylsa hot dogs, ride FlyOver Iceland 5D flight, play at Laugardalslaug pool & slides. Van prep & clean.",
     notes: "Fuel diesel top-up at Orkan/Olís before returning van.",
     completed: false,
@@ -565,10 +580,11 @@ const DEFAULT_ITINERARY = [
     date: "August 8, 2026",
     title: "Dawn Drop-Off & Departure",
     phase: "Phase 6: Capital Celebrations & Departure",
-    category: "standard",
+    category: "capital",
     drivingTime: "~1.2 hours (~65 km)",
     route: "Sandgerði ➔ Kópavogur (Cozy HQ) ➔ KEF Airport",
     campsite: "Home Flight (FI1500 to AMS)",
+    poolShower: "Sandgerðislaug (Morning refresh option before KEF airport departure)",
     summary: "Drive to Cozy Campers HQ in Kópavogur at 04:30. Lock keys inside after-hours keybox at 05:00. Take pre-booked Hreyfill taxi to KEF airport for 07:40 flight FI1500 to Amsterdam.",
     notes: "Flight FI1500 departs at 07:40 AM. Be at KEF by 05:30 AM.",
     completed: false,
@@ -640,6 +656,28 @@ function loadStoredData() {
           Object.assign(day15, JSON.parse(JSON.stringify(defaultDay15)));
         }
       }
+      // Migration / Sanitization for categories & stop names
+      if (itineraryData && Array.isArray(itineraryData)) {
+        itineraryData.forEach(d => {
+          if (d.category === 'gems') d.category = 'highlights';
+          if (d.category === 'standard') {
+            if (d.dayNum === 1 || d.dayNum === 5 || d.dayNum === 7 || d.dayNum === 14) d.category = 'south';
+            else if (d.dayNum === 9 || d.dayNum === 10) d.category = 'north';
+            else if (d.dayNum === 15 || d.dayNum === 16) d.category = 'capital';
+          }
+          if (d.stops && Array.isArray(d.stops)) {
+            d.stops.forEach(s => {
+              if (s.name) s.name = s.name.replace(/\s*\(NEW GEM\)/gi, '');
+            });
+          }
+          const defDay = DEFAULT_ITINERARY.find(def => def.id === d.id);
+          if (defDay) {
+            if (!d.poolShower || d.poolShower.trim() === '') {
+              d.poolShower = defDay.poolShower;
+            }
+          }
+        });
+      }
     } catch (e) {
       itineraryData = JSON.parse(JSON.stringify(DEFAULT_ITINERARY));
     }
@@ -705,16 +743,46 @@ function updateStatsHeader() {
   document.getElementById('stat-total-stops').innerText = `${totalStops} Sights`;
 }
 
+// Feature / Terrain Filter Helper
+function matchesFeatureFilter(day, filterKey) {
+  const allText = (day.title + " " + day.summary + " " + day.notes + " " + day.route + " " + (day.stops ? day.stops.map(s => s.name + " " + s.desc).join(" ") : "")).toLowerCase();
+  
+  if (filterKey === 'waterfall') {
+    return allText.includes('waterfall') || allText.includes('foss') || allText.includes('falls');
+  }
+  if (filterKey === 'canyon') {
+    return allText.includes('canyon') || allText.includes('gjáin') || allText.includes('gljúfur');
+  }
+  if (filterKey === 'geothermal') {
+    return allText.includes('geothermal') || allText.includes('bath') || allText.includes('soak') || allText.includes('lagoon') || allText.includes('hot spring') || allText.includes('tub') || allText.includes('pool');
+  }
+  if (filterKey === 'volcanic') {
+    return allText.includes('volcanic') || allText.includes('lava') || allText.includes('geyser') || allText.includes('mud') || allText.includes('crater') || allText.includes('sulfur');
+  }
+  if (filterKey === 'beach_glacier') {
+    return allText.includes('beach') || allText.includes('glacier') || allText.includes('ice') || allText.includes('sand') || allText.includes('berg');
+  }
+  if (filterKey === 'wildlife') {
+    return allText.includes('whale') || allText.includes('puffin') || allText.includes('seal') || allText.includes('bird') || allText.includes('wildlife');
+  }
+  return false;
+}
+
 // Render Itinerary Grid
 function renderItineraryGrid() {
   const container = document.getElementById('itinerary-grid');
   if (!container) return;
 
   const filtered = itineraryData.filter(day => {
-    // Category filter
-    if (currentFilter === 'gems' && day.category !== 'gems') return false;
-    if (currentFilter === 'highlands' && day.category !== 'highlands') return false;
-    if (currentFilter === 'westfjords' && day.category !== 'westfjords') return false;
+    // Filter matching (Region vs Feature)
+    if (currentFilter !== 'all') {
+      const regionFilters = ['highlights', 'south', 'highlands', 'north', 'westfjords', 'capital'];
+      if (regionFilters.includes(currentFilter)) {
+        if (day.category !== currentFilter) return false;
+      } else {
+        if (!matchesFeatureFilter(day, currentFilter)) return false;
+      }
+    }
 
     // Search filter
     if (currentSearch.trim() !== '') {
@@ -732,7 +800,7 @@ function renderItineraryGrid() {
   if (filtered.length === 0) {
     container.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 4rem 1rem; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--glass-border);">
-        <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">No matching days found</h3>
+        <h3 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 0.5rem;">No matching days found</h3>
         <p style="color: var(--text-muted); font-size: 0.9rem;">Try clearing your search term or switching filters.</p>
       </div>
     `;
@@ -743,9 +811,12 @@ function renderItineraryGrid() {
     const mainImg = (day.stops && day.stops.length > 0 && day.stops.find(s => s.image && s.image.trim() !== '')?.image) ? day.stops.find(s => s.image && s.image.trim() !== '').image : 'iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg';
     
     let catBadge = '';
-    if (day.category === 'gems') catBadge = '<span class="badge badge-amber">🔥 NEW GEM</span>';
-    else if (day.category === 'highlands') catBadge = '<span class="badge badge-aurora">🏔️ HIGHLANDS</span>';
-    else if (day.category === 'westfjords') catBadge = '<span class="badge badge-ice">🌊 WESTFJORDS</span>';
+    if (day.category === 'highlights') catBadge = '<span class="badge badge-amber">⭐ TOP HIGHLIGHT</span>';
+    else if (day.category === 'highlands') catBadge = '<span class="badge badge-ice">🏔️ HIGHLANDS</span>';
+    else if (day.category === 'westfjords') catBadge = '<span class="badge badge-aurora">🌊 WESTFJORDS</span>';
+    else if (day.category === 'north') catBadge = '<span class="badge badge-ice">🌋 NORTH ICELAND</span>';
+    else if (day.category === 'south') catBadge = '<span class="badge badge-aurora">📍 SOUTH & EAST</span>';
+    else if (day.category === 'capital') catBadge = '<span class="badge badge-amber">🏙️ CAPITAL REGION</span>';
 
     const stopsHtml = day.stops ? day.stops.slice(0, 5).map(stop => (stop.image && stop.image.trim() !== '') ? `
       <div class="stop-thumb-item" title="${escapeHtml(stop.name)}" onclick="event.stopPropagation(); openPhotoModal('${escapeHtml(stop.name)}', '${escapeHtml(stop.image)}')">
@@ -789,11 +860,19 @@ function renderItineraryGrid() {
           ` : ''}
 
           <div class="campsite-info-box">
-            <div>
-              <div style="font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase;">Overnight Camp</div>
+            <div style="width: 100%;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase;">Overnight Camp</span>
+                <span style="font-size: 0.75rem; color: var(--ice-600); font-weight: 600;">⏱️ ${escapeHtml(day.drivingTime)}</span>
+              </div>
               <div class="campsite-name">⛺ ${escapeHtml(day.campsite)}</div>
+              ${day.poolShower ? `
+                <div style="margin-top: 0.45rem; padding-top: 0.45rem; border-top: 1px dashed rgba(203, 213, 225, 0.7); font-size: 0.78rem; color: #059669; font-weight: 600; display: flex; align-items: flex-start; gap: 0.35rem; line-height: 1.35;">
+                  <span>🏊</span>
+                  <span><strong>Alt Pool Shower (Optional):</strong> ${escapeHtml(day.poolShower)}</span>
+                </div>
+              ` : ''}
             </div>
-            <div style="font-size: 0.75rem; color: var(--ice-400); font-weight: 600;">⏱️ ${escapeHtml(day.drivingTime)}</div>
           </div>
 
           <div class="card-actions-row" onclick="event.stopPropagation();">
@@ -837,6 +916,8 @@ function openDayViewModal(id) {
   document.getElementById('view-modal-driving').innerText = day.drivingTime;
   document.getElementById('view-modal-route').innerText = day.route;
   document.getElementById('view-modal-campsite').innerText = day.campsite;
+  const poolEl = document.getElementById('view-modal-pool');
+  if (poolEl) poolEl.innerText = day.poolShower || 'Campsite showers available';
   document.getElementById('view-modal-summary').innerText = day.summary;
   
   const notesContainer = document.getElementById('view-modal-notes-box');
@@ -1014,6 +1095,8 @@ function openDayModal(id) {
   document.getElementById('edit-day-driving').value = day.drivingTime;
   document.getElementById('edit-day-route').value = day.route;
   document.getElementById('edit-day-campsite').value = day.campsite;
+  const editPoolEl = document.getElementById('edit-day-pool');
+  if (editPoolEl) editPoolEl.value = day.poolShower || '';
   document.getElementById('edit-day-summary').value = day.summary;
   document.getElementById('edit-day-notes').value = day.notes || '';
 
@@ -1082,6 +1165,8 @@ function saveDayModalChanges() {
   day.drivingTime = document.getElementById('edit-day-driving').value;
   day.route = document.getElementById('edit-day-route').value;
   day.campsite = document.getElementById('edit-day-campsite').value;
+  const editPoolElSave = document.getElementById('edit-day-pool');
+  if (editPoolElSave) day.poolShower = editPoolElSave.value.trim();
   day.summary = document.getElementById('edit-day-summary').value;
   day.notes = document.getElementById('edit-day-notes').value;
 

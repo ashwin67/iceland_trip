@@ -124,17 +124,34 @@
       
       <!-- Toolbar & Filters -->
       <div class="toolbar-card">
-        <div class="filter-group">
-          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; margin-right: 0.5rem;">Filter:</span>
-          <button class="filter-btn active" data-filter="all">All Days (16)</button>
-          <button class="filter-btn" data-filter="gems">🔥 New Gems (4)</button>
-          <button class="filter-btn" data-filter="highlands">🏔️ Highlands</button>
-          <button class="filter-btn" data-filter="westfjords">🌊 Westfjords</button>
+        <div style="display: flex; flex-direction: column; gap: 0.85rem; width: 100%;">
+          <!-- Region Filters -->
+          <div class="filter-group">
+            <span style="font-size: 0.75rem; font-weight: 700; color: var(--ice-600); text-transform: uppercase; letter-spacing: 0.05em; min-width: 75px;">Regions:</span>
+            <button class="filter-btn active" data-filter="all">All Days (16)</button>
+            <button class="filter-btn" data-filter="highlights">⭐ Top Highlights</button>
+            <button class="filter-btn" data-filter="south">📍 South & East</button>
+            <button class="filter-btn" data-filter="highlands">🏔️ Highlands</button>
+            <button class="filter-btn" data-filter="north">🌋 North Region</button>
+            <button class="filter-btn" data-filter="westfjords">🌊 Westfjords</button>
+            <button class="filter-btn" data-filter="capital">🏙️ Capital</button>
+          </div>
+
+          <!-- Feature & Terrain Filters -->
+          <div class="filter-group">
+            <span style="font-size: 0.75rem; font-weight: 700; color: #059669; text-transform: uppercase; letter-spacing: 0.05em; min-width: 75px;">Features:</span>
+            <button class="filter-btn" data-filter="waterfall">💧 Waterfalls</button>
+            <button class="filter-btn" data-filter="canyon">🏞️ Canyons</button>
+            <button class="filter-btn" data-filter="geothermal">♨️ Hot Springs & Baths</button>
+            <button class="filter-btn" data-filter="volcanic">🌋 Lava & Volcanics</button>
+            <button class="filter-btn" data-filter="beach_glacier">🏖️ Ice & Coastlines</button>
+            <button class="filter-btn" data-filter="wildlife">🐋 Whales & Wildlife</button>
+          </div>
         </div>
 
-        <div class="search-box">
+        <div class="search-box" style="width: 100%; margin-top: 0.25rem;">
           <span class="search-icon">🔍</span>
-          <input type="text" id="search-input" class="search-input" placeholder="Search waterfall, canyon, campsite, or day...">
+          <input type="text" id="search-input" class="search-input" placeholder="Search waterfall, canyon, campsite, or day..." style="width: 100%;">
         </div>
       </div>
 
@@ -383,6 +400,10 @@
             <span class="text-muted">Overnight Camp:</span>
             <div style="font-weight: 600; color: #d97706;" id="view-modal-campsite">Campsite</div>
           </div>
+          <div>
+            <span class="text-muted">Optional Swimming Pool & Shower:</span>
+            <div style="font-weight: 600; color: #059669;" id="view-modal-pool">Pool option...</div>
+          </div>
         </div>
 
         <div style="margin-bottom: 1.25rem;">
@@ -432,10 +453,12 @@
           <div class="form-group">
             <label class="form-label">Category Filter</label>
             <select id="edit-day-category" class="form-select">
-              <option value="standard">Standard Route</option>
-              <option value="gems">🔥 New Gem</option>
+              <option value="highlights">⭐ Top Highlight</option>
+              <option value="south">📍 South & East Coast</option>
               <option value="highlands">🏔️ Highlands</option>
+              <option value="north">🌋 North Region</option>
               <option value="westfjords">🌊 Westfjords</option>
+              <option value="capital">🏙️ Capital Region</option>
             </select>
           </div>
           <div class="form-group">
@@ -457,6 +480,11 @@
         <div class="form-group">
           <label class="form-label">Overnight Campsite</label>
           <input type="text" id="edit-day-campsite" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Optional Swimming Pool & Shower (En route or nearby)</label>
+          <input type="text" id="edit-day-pool" class="form-input" placeholder="e.g. Sandgerðislaug (Geothermal pool & hot tubs)">
         </div>
 
         <div class="form-group">

@@ -691,7 +691,6 @@ function registerServiceWorker() {
 function renderApp() {
   renderItineraryGrid();
   renderPackingLists();
-  renderGallery();
   renderJournalList();
   updateStatsHeader();
 }
@@ -854,15 +853,15 @@ function openDayViewModal(id) {
     stopsContainer.innerHTML = day.stops.map(stop => {
       const savedNote = journalNotes[stop.name] || '';
       return `
-        <div style="background: rgba(30, 41, 59, 0.6); border-radius: var(--radius-md); border: 1px solid var(--glass-border); overflow: hidden; margin-bottom: 1.25rem;">
-          <div style="position: relative; ${stop.image ? 'height: 180px;' : 'padding: 1.25rem 1rem 0.5rem 1rem;'} overflow: hidden; background: rgba(15, 23, 42, 0.8);">
+        <div style="background: #ffffff; border-radius: var(--radius-md); border: 1px solid var(--glass-border); overflow: hidden; margin-bottom: 1.25rem; box-shadow: var(--glass-shadow);">
+          <div style="position: relative; ${stop.image ? 'height: 180px;' : 'padding: 1.25rem 1rem 0.5rem 1rem;'} overflow: hidden; background: #0f172a;">
             ${stop.image ? `
               <img src="${stop.image}" alt="${escapeHtml(stop.name)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg'">
-              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(11, 17, 32, 0.9)); padding: 0.75rem 1rem;">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(15, 23, 42, 0.9)); padding: 0.75rem 1rem;">
                 <h4 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: #fff;">${escapeHtml(stop.name)}</h4>
               </div>
             ` : `
-              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--aurora-400); font-style: italic;">✨ ${escapeHtml(stop.name)}</h4>
+              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--ice-500); font-style: italic;">✨ ${escapeHtml(stop.name)}</h4>
             `}
           </div>
 
@@ -870,11 +869,11 @@ function openDayViewModal(id) {
             <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.75rem;">${escapeHtml(stop.desc)}</p>
 
             <!-- Location Journal Note Input -->
-            <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--glass-border); padding: 0.85rem; border-radius: var(--radius-md); margin-top: 0.75rem;">
-              <label style="font-size: 0.8rem; font-weight: 700; color: var(--aurora-400); display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.5rem;">
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.85rem; border-radius: var(--radius-md); margin-top: 0.75rem; width: 100%; box-sizing: border-box;">
+              <label style="font-size: 0.8rem; font-weight: 700; color: var(--ice-600); display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.5rem;">
                 <span>📝 Personal Location Journal & Notes (Auto-Saved)</span>
               </label>
-              <textarea class="form-textarea" style="min-height: 100px; font-size: 0.9rem; line-height: 1.5; padding: 0.75rem;" placeholder="Record memories, photos taken, weather, or tips for ${escapeHtml(stop.name)}..." onchange="saveJournalNote('${escapeHtml(stop.name)}', this.value)" oninput="saveJournalNote('${escapeHtml(stop.name)}', this.value)">${escapeHtml(savedNote)}</textarea>
+              <textarea class="form-textarea" style="width: 100% !important; box-sizing: border-box !important; display: block !important; min-height: 100px; font-size: 0.9rem; line-height: 1.5; padding: 0.75rem;" placeholder="Record memories, photos taken, weather, or tips for ${escapeHtml(stop.name)}..." onchange="saveJournalNote('${escapeHtml(stop.name)}', this.value)" oninput="saveJournalNote('${escapeHtml(stop.name)}', this.value)">${escapeHtml(savedNote)}</textarea>
             </div>
           </div>
         </div>
@@ -909,19 +908,32 @@ function renderJournalList() {
 
   if (entries.length === 0) {
     container.innerHTML = `
-      <div style="text-align: center; padding: 3rem 1rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
-        <p style="color: var(--text-muted); font-size: 0.9rem;">No journal notes recorded yet. Open any Day or Map Marker to add location memories!</p>
+      <div style="text-align: center; padding: 3rem 1.5rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📓</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 0.25rem;">No Journal Entries Yet</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 500px; margin: 0 auto;">Open any Day or Map Marker popup to add notes, memories, and observations for that location!</p>
       </div>
     `;
     return;
   }
 
   container.innerHTML = entries.map(([stopName, text]) => `
-    <div style="background: rgba(30, 41, 59, 0.6); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border); margin-bottom: 0.85rem;">
-      <div style="font-weight: 700; color: var(--aurora-400); font-size: 0.9rem; margin-bottom: 0.35rem;">📍 ${escapeHtml(stopName)}</div>
-      <div style="font-size: 0.85rem; color: var(--text-main); white-space: pre-wrap; line-height: 1.5;">${escapeHtml(text)}</div>
+    <div style="background: #ffffff; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border); margin-bottom: 1rem; box-shadow: var(--glass-shadow);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+        <div style="font-weight: 700; color: var(--ice-600); font-size: 1rem; font-family: var(--font-heading);">📍 ${escapeHtml(stopName)}</div>
+        <button onclick="deleteJournalNote('${escapeHtml(stopName)}')" style="background: none; border: none; color: #ef4444; cursor: pointer; font-size: 0.8rem;" title="Delete Note">🗑️ Delete</button>
+      </div>
+      <div style="font-size: 0.9rem; color: var(--text-main); white-space: pre-wrap; line-height: 1.6; background: #f8fafc; padding: 0.85rem 1rem; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">${escapeHtml(text)}</div>
     </div>
   `).join('');
+}
+
+function deleteJournalNote(stopName) {
+  if (confirm(`Delete journal note for "${stopName}"?`)) {
+    delete journalNotes[stopName];
+    saveData();
+    renderJournalList();
+  }
 }
 
 // Render Leaflet Map
@@ -943,18 +955,22 @@ function initOrUpdateMap() {
 
     ICELAND_MAP_LOCATIONS.forEach(loc => {
       latLngs.push([loc.lat, loc.lng]);
-      const savedNote = journalNotes[loc.name] || '';
 
       const marker = L.marker([loc.lat, loc.lng]).addTo(leafletMap);
       
       const popupContent = `
-        <div style="font-family: sans-serif; min-width: 200px; color: #0f172a;">
-          <div style="font-size: 0.7rem; font-weight: 700; color: #2563eb;">DAY ${loc.day} • PHASE ${loc.phase}</div>
-          <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem;">${loc.name}</div>
-          <div style="font-size: 0.8rem; color: #475569; margin-bottom: 0.5rem;">${loc.desc}</div>
-          <button style="background: #2563eb; color: #fff; border: none; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; cursor: pointer; width: 100%; margin-top: 0.25rem;" onclick="openDayViewModal(${loc.day})">
-            👁️ Open Day ${loc.day} Details
-          </button>
+        <div style="font-family: sans-serif; min-width: 210px; color: #0f172a; padding: 2px;">
+          <div style="font-size: 0.7rem; font-weight: 700; color: #0284c7; margin-bottom: 2px;">DAY ${loc.day} • PHASE ${loc.phase}</div>
+          <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.35rem; color: #0f172a;">${escapeHtml(loc.name)}</div>
+          <div style="font-size: 0.8rem; color: #475569; margin-bottom: 0.65rem; line-height: 1.3;">${escapeHtml(loc.desc)}</div>
+          <div style="display: flex; gap: 0.35rem; flex-direction: column;">
+            <button style="background: #0284c7; color: #ffffff; border: none; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; cursor: pointer; width: 100%;" onclick="openDayViewModal(${loc.day})">
+              👁️ Day ${loc.day} Details
+            </button>
+            <a href="https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}" target="_blank" rel="noopener" style="background: #059669; color: #ffffff; border: none; padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; text-decoration: none; text-align: center; display: block; width: 100%; box-sizing: border-box;">
+              📍 Open in Google Maps
+            </a>
+          </div>
         </div>
       `;
       marker.bindPopup(popupContent);
@@ -1298,14 +1314,41 @@ function closeModal(id) {
 // Export / Import Data
 function exportDataJSON() {
   const exportPayload = {
+    version: "2026.1",
+    exportedAt: new Date().toISOString(),
     itinerary: itineraryData,
-    packing: packingData,
-    exportedAt: new Date().toISOString()
+    journalNotes: journalNotes,
+    packing: packingData
   };
   const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportPayload, null, 2));
   const dlAnchor = document.createElement('a');
   dlAnchor.setAttribute("href", dataStr);
-  dlAnchor.setAttribute("download", "iceland_trip_plan_2026.json");
+  dlAnchor.setAttribute("download", `iceland_expedition_full_backup_${new Date().toISOString().slice(0,10)}.json`);
+  document.body.appendChild(dlAnchor);
+  dlAnchor.click();
+  dlAnchor.remove();
+}
+
+function exportJournalTXT() {
+  const entries = Object.entries(journalNotes).filter(([_, text]) => text && text.trim() !== '');
+  if (entries.length === 0) {
+    alert("No journal notes saved yet. Add notes to any location first!");
+    return;
+  }
+
+  let textContent = "ICELAND EXPEDITION 2026 - PERSONAL LOCATION JOURNAL\n";
+  textContent += "=====================================================\n\n";
+
+  entries.forEach(([stopName, text], idx) => {
+    textContent += `${idx + 1}. LOCATION: ${stopName}\n`;
+    textContent += `-----------------------------------------------------\n`;
+    textContent += `${text}\n\n`;
+  });
+
+  const dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(textContent);
+  const dlAnchor = document.createElement('a');
+  dlAnchor.setAttribute("href", dataStr);
+  dlAnchor.setAttribute("download", `iceland_expedition_journal_${new Date().toISOString().slice(0,10)}.txt`);
   document.body.appendChild(dlAnchor);
   dlAnchor.click();
   dlAnchor.remove();

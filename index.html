@@ -8,7 +8,7 @@
 
   <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0b1120">
+  <meta name="theme-color" content="#f8fafc">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +37,8 @@
 
         <!-- Action Buttons -->
         <div class="header-actions">
-          <button class="btn-secondary" onclick="exportDataJSON()" title="Export JSON backup of your customized plan">
-            <span>📥 Export</span>
+          <button class="btn-secondary" onclick="exportDataJSON()" title="Export JSON backup of your customized plan & journal">
+            <span>📥 Backup JSON</span>
           </button>
           <button class="btn-primary" onclick="addNewCustomDay()">
             <span>➕ Add Day</span>
@@ -62,12 +62,6 @@
         </button>
         <button class="tab-btn" data-tab="packing">
           <span>🎒 Packing Guide</span>
-        </button>
-        <button class="tab-btn" data-tab="calculators">
-          <span>🧮 Calculators</span>
-        </button>
-        <button class="tab-btn" data-tab="gallery">
-          <span>🖼️ Photo Gallery</span>
         </button>
       </nav>
     </div>
@@ -154,8 +148,8 @@
     <section id="tab-panel-map" class="tab-content-panel hidden">
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 1rem; gap: 1rem;">
         <div>
-          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: #fff;">Interactive Expedition Map</h2>
-          <p class="text-muted">Full 16-day route and 55+ locations mapped with interactive popups and journal notes.</p>
+          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-main);">Interactive Expedition Map</h2>
+          <p class="text-muted">Full 16-day route and 55+ locations mapped with interactive popups and 1-click Google Maps links.</p>
         </div>
         <div style="display: flex; gap: 0.75rem;">
           <button class="btn-primary" onclick="downloadKMLFile()">
@@ -165,11 +159,11 @@
       </div>
 
       <!-- Leaflet Map Container -->
-      <div id="expedition-map" style="height: 700px; width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--glass-border); overflow: hidden; margin-bottom: 1.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5);"></div>
+      <div id="expedition-map" style="height: 700px; width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--glass-border); overflow: hidden; margin-bottom: 1.5rem; box-shadow: var(--glass-shadow);"></div>
 
       <!-- Android Mobile Connection Card -->
-      <div style="background: rgba(30, 41, 59, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
-        <h4 style="font-weight: 700; color: var(--aurora-400); font-size: 1rem; margin-bottom: 0.5rem;">📱 Access On Your Android Phone</h4>
+      <div style="background: #ffffff; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border); box-shadow: 0 4px 16px rgba(15,23,42,0.04);">
+        <h4 style="font-weight: 700; color: var(--ice-500); font-size: 1rem; margin-bottom: 0.5rem;">📱 Access On Your Android Phone</h4>
         <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5;">
           1. Connect your Android phone to the same Wi-Fi / Hotspot as your laptop.<br>
           2. Open Chrome or Firefox on your phone and type <strong>http://192.168.x.x:8080</strong> (or your laptop local IP).<br>
@@ -181,9 +175,19 @@
 
     <!-- TAB: TRIP JOURNAL -->
     <section id="tab-panel-journal" class="tab-content-panel hidden">
-      <div style="margin-bottom: 1.5rem;">
-        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">📓 Expedition Location Journal</h2>
-        <p class="text-muted">View all your saved location notes, memories, and travel logs.</p>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem;">
+        <div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">📓 Expedition Location Journal</h2>
+          <p class="text-muted">View all your saved location notes, memories, and travel logs (auto-saved & exportable).</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <button class="btn-secondary" onclick="exportJournalTXT()">
+            <span>📄 Export Journal (TXT)</span>
+          </button>
+          <button class="btn-primary" onclick="exportDataJSON()">
+            <span>💾 Backup Everything (JSON)</span>
+          </button>
+        </div>
       </div>
 
       <div id="journal-entries-container">
@@ -205,21 +209,21 @@
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
-            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border);">
               <span class="text-muted">Chassis Dimensions</span>
               <span style="font-weight: 600;">5.4m Length / 1.4m Interior Height</span>
             </div>
-            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border);">
               <span class="text-muted">Bed Platform Size</span>
               <span style="font-weight: 600;">160cm x 193cm (Convertible Sofa Bed)</span>
             </div>
-            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border);">
               <span class="text-muted">Heating Utility</span>
-              <span style="font-weight: 600; color: #fcd34d;">Webasto Diesel (Connected to 80L Tank)</span>
+              <span style="font-weight: 600; color: #d97706;">Webasto Diesel (Connected to 80L Tank)</span>
             </div>
-            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border);">
               <span class="text-muted">Electrical Supply</span>
-              <span style="font-weight: 600; color: #a7f3d0;">115W Solar + Engine Alternator</span>
+              <span style="font-weight: 600; color: #059669;">115W Solar + Engine Alternator</span>
             </div>
             <div style="display: flex; justify-content: space-between;">
               <span class="text-muted">Kitchen Essentials</span>
@@ -238,17 +242,46 @@
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
-            <div style="background: rgba(30, 41, 59, 0.5); padding: 0.75rem; border-radius: var(--radius-md);">
-              <div style="font-weight: 700; color: var(--ice-400);">18:20 Landing at KEF</div>
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+              <div style="font-weight: 700; color: var(--ice-500);">18:20 Landing at KEF</div>
               <div style="color: var(--text-muted);">Clear border control & collect 3 hard cases + 3 carry-ons. Put on windproof shell immediately.</div>
             </div>
-            <div style="background: rgba(30, 41, 59, 0.5); padding: 0.75rem; border-radius: var(--radius-md);">
-              <div style="font-weight: 700; color: var(--ice-400);">19:45 - 20:30 Flybus to Kópavogur</div>
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+              <div style="font-weight: 700; color: var(--ice-500);">19:45 - 20:30 Flybus to Kópavogur</div>
               <div style="color: var(--text-muted);">Board Flybus outside terminal to Hamraborg stop (Kópavogur Library).</div>
             </div>
-            <div style="background: rgba(30, 41, 59, 0.5); padding: 0.75rem; border-radius: var(--radius-md);">
-              <div style="font-weight: 700; color: var(--ice-400);">20:30 Taxi to Cozy HQ & Keybox Pickup</div>
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+              <div style="font-weight: 700; color: var(--ice-500);">20:30 Taxi to Cozy HQ & Keybox Pickup</div>
               <div style="color: var(--text-muted);">Short 3.5km Hreyfill taxi ride to Kársnesbraut 106. Keybox code self-service pickup.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Day Departure & Return Protocol -->
+        <div class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">🛫</div>
+            <div>
+              <div class="info-card-title">Day 16 Departure & Van Return</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Keybox Drop & KEF Airport Transfer</div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+              <div style="font-weight: 700; color: var(--ice-500);">04:30 Depart Sandgerði Campsite</div>
+              <div style="color: var(--text-muted);">Early morning drive (~10 mins) from Sandgerði campsite to Cozy Campers HQ in Kópavogur.</div>
+            </div>
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+              <div style="font-weight: 700; color: var(--ice-500);">05:00 After-Hours Keybox Return</div>
+              <div style="color: var(--text-muted);">Lock van doors & drop key into after-hours keybox at Kársnesbraut 106.</div>
+            </div>
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+              <div style="font-weight: 700; color: var(--ice-500);">05:15 - 05:45 Taxi to KEF Airport</div>
+              <div style="color: var(--text-muted);">Pre-booked Hreyfill Taxi direct transfer to Keflavík Terminal for check-in.</div>
+            </div>
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+              <div style="font-weight: 700; color: #059669;">07:40 Departure Flight FI1500</div>
+              <div style="color: var(--text-muted);">Board flight FI1500 back to Amsterdam.</div>
             </div>
           </div>
         </div>
@@ -265,7 +298,7 @@
           <p style="font-size: 0.85rem; color: var(--text-muted);">
             The Icelandic Camping Card covers overnight stay fees for 2 adults and up to 4 children at designated partner campsites across Iceland.
           </p>
-          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.825rem; color: #a7f3d0;">
+          <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.825rem; color: #166534;">
             <strong>Covered Sites On Route:</strong> Sandgerði, Gaddstaðaflatir Hella, Kleifarmörk, Skaftafell, Djúpivogur, Egilsstaðir, Möðrudalur, Húsavík, Skagaströnd, Tungudalur (Ísafjörður), Tálknafjörður, Tjaldsvæði að Hlöðum.
           </div>
         </div>
@@ -319,97 +352,6 @@
       </div>
     </section>
 
-    <!-- TAB 4: CALCULATORS & BUDGET -->
-    <section id="tab-panel-calculators" class="tab-content-panel hidden">
-      <div class="section-grid">
-        
-        <!-- Luggage Tetris Calculator -->
-        <div class="info-card">
-          <div class="info-card-header">
-            <div class="info-card-icon">🧳</div>
-            <div>
-              <div class="info-card-title">Van Luggage Space Advisor</div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">Cozy 3 M Storage Tetris</div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Checked Hard Suitcases (20kg Limit)</label>
-            <input type="number" id="calc-hard" class="form-input" value="3" min="0" max="6" onchange="calculateLuggageTetris()">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Cabin Carry-On / Soft Bags (10kg Limit)</label>
-            <input type="number" id="calc-soft" class="form-input" value="3" min="0" max="6" onchange="calculateLuggageTetris()">
-          </div>
-
-          <div id="tetris-result"></div>
-        </div>
-
-        <!-- Ferry Baldur Cost Estimator -->
-        <div class="info-card">
-          <div class="info-card-header">
-            <div class="info-card-icon">⛵</div>
-            <div>
-              <div class="info-card-title">Ferry Baldur Cost Estimator</div>
-              <div style="font-size: 0.75rem; color: var(--text-muted);">Breiðafjörður Fjord Crossing (Aug 5)</div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Vehicle Length (Meters)</label>
-            <select id="ferry-len" class="form-select" onchange="calculateFerryFare()">
-              <option value="5.4" selected>Cozy 3 M (5.4m total chassis)</option>
-              <option value="4.9">Compact Van (Under 5.0m)</option>
-              <option value="6.5">Large Motorhome (Over 6.0m)</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Adult Passengers</label>
-            <input type="number" id="ferry-adults" class="form-input" value="2" min="1" max="5" onchange="calculateFerryFare()">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Child Passenger Age</label>
-            <input type="number" id="ferry-child-age" class="form-input" value="11" min="1" max="17" onchange="calculateFerryFare()">
-          </div>
-
-          <div style="background: rgba(30, 41, 59, 0.6); padding: 1rem; border-radius: var(--radius-md); font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
-            <div style="display: flex; justify-content: space-between;">
-              <span class="text-muted">Vehicle Base Fare:</span>
-              <span id="ferry-veh-fare" style="font-weight: 600;">13,800 ISK</span>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-              <span class="text-muted">Adult Tickets:</span>
-              <span id="ferry-adult-fare" style="font-weight: 600;">15,400 ISK</span>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-              <span class="text-muted">Child Ticket (Age 11):</span>
-              <span id="ferry-child-fare" style="font-weight: 600; color: #a7f3d0;">0 ISK (Free)</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-weight: 700; color: var(--ice-400);">
-              <span>Total Estimated Fare:</span>
-              <span id="ferry-total-fare">29,200 ISK (~€195)</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TAB 5: PHOTO GALLERY -->
-    <section id="tab-panel-gallery" class="tab-content-panel hidden">
-      <div style="margin-bottom: 1.5rem;">
-        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Expedition Photo Asset Explorer</h2>
-        <p class="text-muted">Click any photo to view full-resolution lightbox view.</p>
-      </div>
-
-      <div class="gallery-grid" id="gallery-grid-container">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-    </section>
-
   </div>
 
   <!-- READ-ONLY DAY VIEW MODAL -->
@@ -417,7 +359,7 @@
     <div class="modal-card day-view-modal-card">
       <div class="modal-header">
         <div>
-          <span style="font-size: 0.75rem; color: var(--ice-400); font-weight: 700; text-transform: uppercase;" id="view-modal-day-num">DAY 1</span>
+          <span style="font-size: 0.75rem; color: var(--ice-500); font-weight: 700; text-transform: uppercase;" id="view-modal-day-num">DAY 1</span>
           <h2 class="modal-title" style="margin-top: 0.2rem;" id="view-modal-title">Day Title</h2>
           <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;" id="view-modal-date">July 24, 2026</div>
         </div>
@@ -431,15 +373,15 @@
         <div class="modal-info-bar">
           <div>
             <span class="text-muted">Driving Route:</span>
-            <div style="font-weight: 600; color: #fff;" id="view-modal-route">Route...</div>
+            <div style="font-weight: 600; color: var(--text-main);" id="view-modal-route">Route...</div>
           </div>
           <div>
             <span class="text-muted">Driving Time & Distance:</span>
-            <div style="font-weight: 600; color: var(--ice-400);" id="view-modal-driving">~2 hours</div>
+            <div style="font-weight: 600; color: var(--ice-500);" id="view-modal-driving">~2 hours</div>
           </div>
           <div>
             <span class="text-muted">Overnight Camp:</span>
-            <div style="font-weight: 600; color: #fcd34d;" id="view-modal-campsite">Campsite</div>
+            <div style="font-weight: 600; color: #d97706;" id="view-modal-campsite">Campsite</div>
           </div>
         </div>
 
@@ -453,13 +395,13 @@
           <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.6;" id="view-modal-summary">Summary text...</p>
         </div>
 
-        <div id="view-modal-notes-box" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.85rem; color: #fde68a; margin-bottom: 1.25rem; display: none;">
+        <div id="view-modal-notes-box" style="background: #fffbeb; border: 1px solid #fde68a; padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.85rem; color: #92400e; margin-bottom: 1.25rem; display: none;">
           <strong>⚠️ Warnings / Notes:</strong>
           <div id="view-modal-notes" style="margin-top: 0.25rem;"></div>
         </div>
 
         <div style="margin-top: 1.5rem;">
-          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Sights & Location Journal</h3>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">Sights & Location Journal</h3>
           <div id="view-modal-stops-list"></div>
         </div>
       </div>
@@ -471,7 +413,7 @@
     <div class="modal-card">
       <div class="modal-header">
         <div>
-          <span style="font-size: 0.75rem; color: var(--ice-400); font-weight: 700; text-transform: uppercase;" id="modal-day-num">DAY 1</span>
+          <span style="font-size: 0.75rem; color: var(--ice-500); font-weight: 700; text-transform: uppercase;" id="modal-day-num">DAY 1</span>
           <h2 class="modal-title" style="margin-top: 0.2rem;">Edit Day Plan Details</h2>
         </div>
         <button class="modal-close-btn" onclick="closeDayModal()">✕</button>
@@ -536,7 +478,7 @@
           <div id="modal-stops-container"></div>
         </div>
 
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 1rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 1rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--glass-border);">
           <button class="btn-secondary" onclick="closeDayModal()">Cancel</button>
           <button class="btn-primary" onclick="saveDayModalChanges()">💾 Save Changes</button>
         </div>
@@ -546,7 +488,7 @@
 
   <!-- PHOTO LIGHTBOX MODAL -->
   <div class="modal-overlay" id="photo-lightbox-modal">
-    <div class="modal-card" style="max-width: 800px; background: rgba(9, 13, 22, 0.98);">
+    <div class="modal-card" style="max-width: 800px; background: #ffffff;">
       <div class="modal-header">
         <h3 id="lightbox-title" class="modal-title">Photo View</h3>
         <button class="modal-close-btn" onclick="closeModal('photo-lightbox-modal')">✕</button>

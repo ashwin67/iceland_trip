@@ -517,20 +517,20 @@ const DEFAULT_ITINERARY = [
     id: 15,
     dayNum: 15,
     date: "August 7, 2026",
-    title: "The Great Birthday Celebration in Capital",
+    title: "Capital Exploration & Departure Prep",
     phase: "Phase 6: Capital Celebrations & Departure",
     category: "standard",
     drivingTime: "~1.5 hours (~110 km)",
     route: "Hvalfjörður ➔ Hveragerði ➔ Reykjavík ➔ Sandgerði",
     campsite: "Sandgerði Campsite (Camping Card)",
-    summary: "Fly 1km over Svartagljúfur canyon on Mega Zipline in Hveragerði at 09:30. Spend afternoon in downtown Reykjavík: eat Vegan Pylsa hot dogs, ride FlyOver Iceland 5D flight, play at Laugardalslaug pool & slides. Van prep & clean.",
+    summary: "Morning surprise activity in Hveragerði at 09:30. Spend afternoon in downtown Reykjavík: eat Vegan Pylsa hot dogs, ride FlyOver Iceland 5D flight, play at Laugardalslaug pool & slides. Van prep & clean.",
     notes: "Fuel diesel top-up at Orkan/Olís before returning van.",
     completed: false,
     stops: [
       {
-        name: "Mega Zipline Svartagljúfur (Hveragerði)",
-        desc: "Fly 1 km over dramatic waterfall canyon for son's birthday launch.",
-        image: "iceland_trip_photos/phase_6_capital_celebrations_and_departure/50_hveragerdi_mega_zipline_svartagljufur.jpg"
+        name: "Morning Surprise Activity (Hveragerði)",
+        desc: "Special surprise planned for the morning.",
+        image: ""
       },
       {
         name: "Downtown Reykjavík",
@@ -633,6 +633,13 @@ function loadStoredData() {
   if (storedItinerary) {
     try {
       itineraryData = JSON.parse(storedItinerary);
+      const day15 = itineraryData.find(d => d.id === 15);
+      if (day15 && (day15.title.toLowerCase().includes('birthday') || day15.summary.toLowerCase().includes('zipline') || (day15.stops && day15.stops.some(s => s.name.toLowerCase().includes('zipline'))))) {
+        const defaultDay15 = DEFAULT_ITINERARY.find(d => d.id === 15);
+        if (defaultDay15) {
+          Object.assign(day15, JSON.parse(JSON.stringify(defaultDay15)));
+        }
+      }
     } catch (e) {
       itineraryData = JSON.parse(JSON.stringify(DEFAULT_ITINERARY));
     }
@@ -671,8 +678,9 @@ function saveData() {
 // Service Worker for Android Offline PWA
 function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js').then(() => {
-      console.log('Iceland Expedition Service Worker Registered Successfully.');
+    navigator.serviceWorker.register('./sw.js').then((reg) => {
+      console.log('Iceland Expedition Service Worker Registered.');
+      reg.update();
     }).catch(err => {
       console.log('Service Worker registration skipped:', err);
     });
@@ -733,16 +741,20 @@ function renderItineraryGrid() {
   }
 
   container.innerHTML = filtered.map(day => {
-    const mainImg = (day.stops && day.stops.length > 0 && day.stops[0].image) ? day.stops[0].image : 'iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg';
+    const mainImg = (day.stops && day.stops.length > 0 && day.stops.find(s => s.image && s.image.trim() !== '')?.image) ? day.stops.find(s => s.image && s.image.trim() !== '').image : 'iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg';
     
     let catBadge = '';
     if (day.category === 'gems') catBadge = '<span class="badge badge-amber">🔥 NEW GEM</span>';
     else if (day.category === 'highlands') catBadge = '<span class="badge badge-aurora">🏔️ HIGHLANDS</span>';
     else if (day.category === 'westfjords') catBadge = '<span class="badge badge-ice">🌊 WESTFJORDS</span>';
 
-    const stopsHtml = day.stops ? day.stops.slice(0, 5).map(stop => `
+    const stopsHtml = day.stops ? day.stops.slice(0, 5).map(stop => (stop.image && stop.image.trim() !== '') ? `
       <div class="stop-thumb-item" title="${escapeHtml(stop.name)}" onclick="event.stopPropagation(); openPhotoModal('${escapeHtml(stop.name)}', '${escapeHtml(stop.image)}')">
         <img src="${stop.image}" alt="${escapeHtml(stop.name)}" class="stop-thumb-img" onerror="this.src='iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg'">
+      </div>
+    ` : `
+      <div class="stop-thumb-item" title="${escapeHtml(stop.name)}" style="background: rgba(30, 41, 59, 0.8); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 1px dashed var(--glass-border);">
+        ✨
       </div>
     `).join('') : '';
 
@@ -843,11 +855,15 @@ function openDayViewModal(id) {
       const savedNote = journalNotes[stop.name] || '';
       return `
         <div style="background: rgba(30, 41, 59, 0.6); border-radius: var(--radius-md); border: 1px solid var(--glass-border); overflow: hidden; margin-bottom: 1.25rem;">
-          <div style="position: relative; height: 180px; overflow: hidden;">
-            <img src="${stop.image}" alt="${escapeHtml(stop.name)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg'">
-            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(11, 17, 32, 0.9)); padding: 0.75rem 1rem;">
-              <h4 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: #fff;">${escapeHtml(stop.name)}</h4>
-            </div>
+          <div style="position: relative; ${stop.image ? 'height: 180px;' : 'padding: 1.25rem 1rem 0.5rem 1rem;'} overflow: hidden; background: rgba(15, 23, 42, 0.8);">
+            ${stop.image ? `
+              <img src="${stop.image}" alt="${escapeHtml(stop.name)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='iceland_trip_photos/phase_1_arrival_and_geothermal_beginnings/04_the_blue_lagoon.jpg'">
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(11, 17, 32, 0.9)); padding: 0.75rem 1rem;">
+                <h4 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: #fff;">${escapeHtml(stop.name)}</h4>
+              </div>
+            ` : `
+              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--aurora-400); font-style: italic;">✨ ${escapeHtml(stop.name)}</h4>
+            `}
           </div>
 
           <div style="padding: 1rem;">
@@ -1152,7 +1168,9 @@ function renderGallery() {
   itineraryData.forEach(d => {
     if (d.stops) {
       d.stops.forEach(s => {
-        allStops.push({ day: d.dayNum, name: s.name, image: s.image, desc: s.desc });
+        if (s.image && s.image.trim() !== '') {
+          allStops.push({ day: d.dayNum, name: s.name, image: s.image, desc: s.desc });
+        }
       });
     }
   });

@@ -61,7 +61,7 @@ const ICELAND_MAP_LOCATIONS = [
   { name: "Hraunfossar & Barnafoss", day: 14, lat: 64.7028, lng: -20.9772, phase: 6, desc: "Waterfalls flowing out of lava." },
   { name: "Deildartunguhver", day: 14, lat: 64.6631, lng: -21.4114, phase: 6, desc: "Europe's most powerful hot spring." },
   { name: "Tjaldsvæði að Hlöðum (Hvalfjörður)", day: 14, lat: 64.3333, lng: -21.7500, phase: 6, desc: "Greenhouse campsite." },
-  { name: "Mega Zipline Svartagljúfur (Hveragerði)", day: 15, lat: 63.9986, lng: -21.1870, phase: 6, desc: "1km canyon flight." },
+  { name: "Surprise Activity (Hveragerði)", day: 15, lat: 63.9986, lng: -21.1870, phase: 6, desc: "Morning surprise activity." },
   { name: "Downtown Reykjavík", day: 15, lat: 64.1466, lng: -21.9426, phase: 6, desc: "FlyOver Iceland & city walks." }
 ];
 

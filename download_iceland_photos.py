@@ -94,7 +94,7 @@ ITINERARY = [
         "items": [
             ("48_deildartunguhver", "Deildartunguhver", "Deildartunguhver hot spring steaming Europe Iceland"),
             ("49_mosskogar_camping", "Mosskogar Camping", "Mosskogar greenhouse camping Iceland"),
-            ("50_hveragerdi_mega_zipline_svartagljufur", "Hveragerði (Mega Zipline Svartagljúfur)", "Mega Zipline Svartagljufur canyon flight Hveragerdi Iceland"),
+            ("50_hveragerdi_town", "Hveragerði Town", "Hveragerdi geothermal town Iceland"),
             ("51_downtown_reykjavik", "Downtown Reykjavík", "Downtown Reykjavik streets colorful houses Hallgrimskirkja Iceland"),
             ("52_flyover_iceland", "FlyOver Iceland", "FlyOver Iceland Grandi harbor flight simulator Reykjavik"),
             ("53_laugardalslaug_leisure_pool", "Laugardalslaug Leisure Pool", "Laugardalslaug swimming pool hot tubs slide Reykjavik Iceland"),
